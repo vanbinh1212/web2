@@ -1,0 +1,288 @@
+<?php
+	session_start();
+	
+	define("SNAPE_VN", true);
+	include_once(dirname(__FILE__)."/../#config.php");
+
+	include_once(dirname(__FILE__)."/../class/class.account.php");
+
+	include_once(dirname(__FILE__)."/../class/function.global.php");
+
+	include_once(dirname(__FILE__)."/../class/function.soap.php");
+	$userid = $_SESSION['ss_user_id'];
+	
+	
+	if($_POST)  {
+	if($userid) {
+		
+		$userInfo = account::getUserInfo(trim($userid));
+	$userInfoVIP = account::getUserInfoLogVIP(trim($userid));
+	$userLevelVIP = account::getUserInfoLogLevelVIP(trim($userInfo['VIPLevel']), trim($userid));
+	if($userInfoVIP == 0) {
+		
+			}		
+		if($userLevelVIP == 0) {
+
+			
+			// get userid							
+
+				switch($userInfo['VIPLevel']) {
+					case 0:
+					//account::addItemBag($userid, 0, 55000010 , 100, true, 0, true); // 
+					//account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+					case 1:
+					account::addItemBag($userid, 0, 55000010 , 100, true, 0, true); // 
+					account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+					case 2:
+					account::addItemBag($userid, 0, 55000010 , 100, true, 0, true); // 
+					account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+					case 3:
+					account::addItemBag($userid, 0, 55000010 , 200, true, 0, true); // 
+					account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+					case 4:
+					account::addItemBag($userid, 0, 55000010 , 300, true, 0, true); // 
+					account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+					case 5:
+					account::addItemBag($userid, 0, 55000010 , 400, true, 0, true); // 
+					account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+					case 6:
+					account::addItemBag($userid, 0, 55000010 , 500, true, 0, true); // 
+					account::log($userid, 'VIP', 2, 'Bạn nhận được quà CẤP VIP '.$userInfo['VIPLevel'].' từ Hệ Thống', 0);
+					account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel']);
+					break;
+				
+				}
+				echo '<script>SnapeClass.openModal("Thông báo", "Bạn đã nhận Quà <b><font color=red> VIP '.$userInfo['VIPLevel'].'</font></b>  thành công vui lòng kiểm tra Túi Web", [])</script>';
+
+				$userInfo['VIPLevel'];
+				
+			
+			}		
+				else {
+				echo '<script>SnapeClass.openModal("Thông báo", "Bạn đã nhận <b><font color=red>Quà VIP '.$userInfo['VIPLevel'].'</font></b> rồi. Vui lòng tăng cấp VIP để nhận thêm !  ", [])</script>';
+			}
+		
+	
+	}
+	}
+	
+	
+?>
+<div style="padding:5px !important;">
+ 
+
+<ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#home"><font color=purple><b>Quà VIP</b></font></a></li>
+	 <li><a data-toggle="tab" href="#menu4"><font color=red><b>Nhận Quà</b></font></a></li>
+</ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  
+    <div id="home" style="width:100% !important;" class="container tab-pane active"><br>
+
+
+	    <div class="row">
+						
+  <table border=1 class="table table-striped" style="width:100%">
+							<thead>
+			  <tr>
+				<th>CẤP</th>
+				<th> Vật Phẩm</th>
+				<th>Số Lượng</th>	
+				<th width=200>Thời Hạn</th>
+				
+			  </tr>
+			</thead>
+			<tbody>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/0.png"></th>
+						<td><span class="label" style="background-color:purple">Không có</span></td>
+						<td><span class="label" style="background-color:purple">Không có</span></td>
+						<td><span class="label" style="background-color:purple">Không có</span></td>
+						</tr>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/1.png"></th>
+						<th><img width=50 class="personPopupTrigger" alt="55000010,0.Đã khóa" src="http://res.gn.zing.vn/image/unfrightprop/VIPDiscount/icon.png"></th>
+						<td><span class="label" style="background-color:black">100</span></td>
+						<td><span class="label" style="background-color:#188ae2">Hiệu lực vĩnh cửu</span></td>						
+						</tr>
+							<tr>
+						<td><img src="http://gunbachay.net/images/vip/2.png"></th>
+						<th><img width=50 class="personPopupTrigger" alt="55000010,0.Đã khóa" src="http://res.gn.zing.vn/image/unfrightprop/VIPDiscount/icon.png"></th>
+						<td><span class="label" style="background-color:black">100</span></td>
+						<td><span class="label" style="background-color:#188ae2">Hiệu lực vĩnh cửu</span></td>						
+						</tr>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/3.png"></th>
+						<th><img width=50 class="personPopupTrigger" alt="55000010,0.Đã khóa" src="http://res.gn.zing.vn/image/unfrightprop/VIPDiscount/icon.png"></th>
+						<td><span class="label" style="background-color:black">200</span></td>
+						<td><span class="label" style="background-color:#188ae2">Hiệu lực vĩnh cửu</span></td>						
+						</tr>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/4.png"></th>
+						<th><img width=50 class="personPopupTrigger" alt="55000010,0.Đã khóa" src="http://res.gn.zing.vn/image/unfrightprop/VIPDiscount/icon.png"></th>
+						<td><span class="label" style="background-color:black">300</span></td>
+						<td><span class="label" style="background-color:#188ae2">Hiệu lực vĩnh cửu</span></td>						
+						</td></tr>
+<tr>
+						<td><img src="http://gunbachay.net/images/vip/5.png"></td>
+						<th><img width=50 class="personPopupTrigger" alt="55000010,0.Đã khóa" src="http://res.gn.zing.vn/image/unfrightprop/VIPDiscount/icon.png"></th>
+						<td><span class="label" style="background-color:black">400</span></td>
+						<td><span class="label" style="background-color:#188ae2">Hiệu lực vĩnh cửu</span></td>						
+						</td></tr>						
+						<td><img src="http://gunbachay.net/images/vip/6.png"></td>
+						<th><img width=50 class="personPopupTrigger" alt="55000010,0.Đã khóa" src="http://res.gn.zing.vn/image/unfrightprop/VIPDiscount/icon.png"></th>
+						<td><span class="label" style="background-color:black">500</span></td>
+						<td><span class="label" style="background-color:#188ae2">Hiệu lực vĩnh cửu</span></td>						
+						</td></tr>	
+						<td><img src="http://gunbachay.net/images/vip/7.png"></td>
+						<td><span class="label" style="background-color:#f9c851">Chưa mở</span></td>
+						<td><span class="label" style="background-color:#f9c851">Chưa mở</span></td>
+						<td><span class="label" style="background-color:#f9c851">Chưa mở</span></td>
+						</td></tr>							
+			</tbody>
+							</table>
+							
+ </div>
+ </div>
+  <div id="menu4" class="container tab-pane fade"><br>
+   <div id="quanap" class="alert alert-warning" style="width:60%">
+
+			 <p class="text-danger">Exp VIP tương ứng với Số tiền bạn đã nạp ( 1 VNĐ = 1 EXP ) </a> </p>
+</div>
+
+  <div class="col-md-4">
+<br>
+	      <div id="tile" class="alert alert-info">
+					<div id="namebox" class="panel-heading">TỈ LỆ EXP CẤP VIP</div>
+
+  <table border=1 class="table table-striped" style="width:100%">
+							<thead>
+			 	  <tr>
+				<th>CẤP</th>
+				<th>EXP</th>	
+				
+			  </tr>
+			</thead>
+			<tbody>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/0.png"></th>
+						<td><span class="label" style="background-color:#4bd396">0</span></td>
+						</tr>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/1.png"></th>
+						<td><span class="label" style="background-color:#4bd396">200.000</span></td>
+						</tr>
+							<tr>
+						<td><img src="http://gunbachay.net/images/vip/2.png"></th>
+						<td><span class="label" style="background-color:#4bd396">500.000</span></td>
+						</tr>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/3.png"></th>
+						<td><span class="label" style="background-color:#4bd396">1.000.000</span></td>
+						</tr>
+						<tr>
+						<td><img src="http://gunbachay.net/images/vip/4.png"></th>
+						<td><span class="label" style="background-color:#4bd396">2.000.000</span></td>
+						</td></tr>
+<tr>
+						<td><img src="http://gunbachay.net/images/vip/5.png"></td>
+						<td><span class="label" style="background-color:#4bd396">4.500.000</span></td>
+						</td></tr>	
+						<td><img src="http://gunbachay.net/images/vip/6.png"></td>
+						<td><span class="label" style="background-color:#4bd396">6.000.000</span></td>
+						</td></tr>						
+						<td><img src="http://gunbachay.net/images/vip/7.png"></td>
+						<td><span class="label" style="background-color:#f9c851">Chưa mở</span></td>
+						</td></tr>			
+			</tbody>
+							</table>
+    
+    </div>
+	</div>
+	<div class="col-md-3">
+   <div id="quanap" class="alert alert-success" style="width:100%">
+
+<form id="frmReCharge" method="post">
+<label class="control-label" for="email_login">Loại Quà:</label>
+
+			<select class="form-control"  name="txtVip">
+			<option value="1">VIP</option>
+
+			
+			</select>
+			<br>
+			
+	<center><input type="submit" class="btn btn-danger btn-block" value="Nhận Quà VIP Ngay !" />
+</form>
+</div>
+<div class="panel panel-danger" style="margin-top: 25px;">
+					<div id="namebox" class="panel-heading">Lịch sử nhận quà VIP</div>
+					<div class="panel-body">
+						<div class="center-block">
+							<table class="table table-striped">
+							<thead>
+			  <tr>
+				<th>STT</th>
+				<th>CẤP</th>						
+				<th>THỜI GIAN</th>
+				
+			  </tr>
+			</thead>
+			<tbody>
+			<?php
+			$qcheck = sqlsrv_query($conn, "select * from Log_VIP where UserID='$userid' order by TimeCreate desc", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET));
+			
+			$dem = 0;
+		
+			if (sqlsrv_num_rows($qcheck) <> 0) {
+					while($r =sqlsrv_fetch_array($qcheck, SQLSRV_FETCH_ASSOC)){
+						$dem++;
+						echo '
+						<tr>
+						<td>'.$dem.'</th>
+						<td><span class="label" style="background-color:red">'.$r['Level'].'</span></t>																		
+						<td><span class="label" style="background-color:green"><i><b>'.$r['TimeCreate'].'</b></i></span></t>						
+						</tr>
+						';
+
+					}
+				}else {
+										echo '<tr><td align="center" colspan="7"><b>Chưa có giao dịch nào được thực hiện</b></td></tr>';
+									}
+			?>
+			
+			</tbody>
+							</table>
+						</div>
+					
+
+						
+<br>
+						</div>
+</div>
+</div>
+
+	</div>
+     
+    </div>			
+
+  
+ <div style="height:250px">
+       
+    </div>
+	
+    </div>

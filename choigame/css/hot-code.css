@@ -1,0 +1,170 @@
+#codePopup {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	display: none;
+	overflow: hidden;
+	border-radius: 10px;
+	background: #ffffff;
+	width: 824px;
+	height: 600px;
+	z-index: 1000;
+
+}
+#CachNhan {
+display:none;
+}
+
+.ContentCode {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	clear: both;
+	padding-top: 20px;
+}
+
+.CodeLeft {
+	width: 180px;
+	float: left;
+	background: #ffa200;
+	min-height:600px;
+
+}
+.CodeRight {
+	width: 580px;
+	float: right;
+	padding: 25px 10px 10px 30px;
+	
+}
+.CodeLeft ul li a:link ,
+.CodeLeft ul li a:visited {
+	background: url(../images/btn-hotcode.jpg) no-repeat;
+	width: 180px;
+	height: 60px;
+	display: block;
+	overflow: hidden;
+	color: #821301;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+}
+.CodeLeft ul li a:hover{
+	background-position: 0 -60px;
+}
+.CodeLeft ul li.Active a:link ,
+.CodeLeft ul li.Active a:visited,
+.CodeLeft ul li.Active a:hover {
+	background-position: 0 -120px;
+	text-indent: -9999px;
+}
+
+.TitleCode {
+	color: #ffa200;
+	font-size: 30px;
+	text-transform: uppercase;
+	line-height: 40px;
+}
+.DateCode {
+	font-size: 14px;
+	color: #818181;
+	padding: 0 0 10px 0;
+}
+.TabPopup {
+	border-bottom: #ffa200 solid 1px;
+	height: 30px;
+}
+.TabPopup a.PhanThuong:link,
+.TabPopup a.PhanThuong:visited {
+	background: url(../images/code-tab.jpg) 0 0px;
+	width: 133px;
+	height: 31px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	float: left;
+}
+
+.TabPopup li.Active a.PhanThuong,
+.TabPopup a.PhanThuong:hover {
+	background-position:  0 -31px;
+}
+.TabPopup a.CachNhan:link,
+.TabPopup a.CachNhan:visited {
+	background: url(../images/code-tab.jpg) -133px -31px ;
+	width: 173px;
+	height: 31px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	float: left;
+}
+.TabPopup li.Active a.CachNhan,
+.TabPopup a.CachNhan:hover {
+	background-position:  -133px 0px;
+}
+a#codeClose:link,
+a#codeClose:visited {
+	background: url(../images/close-code.png)  0px  0px ;
+	width: 30px;
+	height: 30px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+a#codeClose:hover {
+	background-position: 0 -30px;
+}
+a.Hot-Code:link,
+a.Hot-Code:visited {
+	background: url(../images/code-hot.jpg)  0px  0px ;
+	width: 220px;
+	height: 80px;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-top: 20px;
+	
+}
+a.Hot-Code:hover {
+	background-position: 0 -80px;
+}
+
+
+
+    .CodeTable {
+        margin: 0 auto 10px;
+        border-collapse: collapse;
+    }
+        .CodeTable thead tr th {
+            color: #fff;
+            background: #ffa200;
+            font-weight: bolder;
+            padding: 5px 10px;
+			border:1px solid #ffc600;
+        }
+        .OddRow {
+            background: #fff1d8;
+        }
+        .EvenRow {
+            background: #fff1d8;
+        }
+        .CodeTable tbody tr td {
+            padding: 3px 5px;
+			border:1px solid #ffc600;
+			color: #818181;
+        }
+        .CodeTable .HorzRight {
+            text-align: right !important;
+        }
+        .CodeTable .HorzCenter {
+            text-align: center !important;
+        }
+        .CodeTable .VeztTop {
+            vertical-align: top !important;
+        }
+/* END. Tables */

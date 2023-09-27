@@ -1,0 +1,39 @@
+<?php
+if(!defined("SNAPE_VN")) die('No access');
+
+if(!$account->isLogin())
+	movepage($_config['page']['fullurl'].'/dang-nhap/?return='.base64currenturl());
+
+
+if(($userInfo['Fullname'] == 'Huydeptrai')) {
+
+	$text = "Hello Admin .Dưới đây là các chức năng dành riêng cho bạn</font><br/><br/>";
+
+	if($userInfo['Fullname'] == 'Huydeptrai')
+		$text .= "+ <a href='http://gunbachay.net/cedrus/' target='_blank'>Gửi Quà Nạp Thẻ</a><br> + <a href='http://gunbachay.net/cedrus-1/' target='_blank'>Lịch Sử Nạp Thẻ Toàn Server</a>";
+
+
+	echo '<script>SnapeClass.openModal("THÔNG BÁO", "'.$text.'", [])</script>';
+}
+
+$accountPage = remoteAccount($_REQUEST['module']);
+
+?>
+		
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div id="msg_err_spin" class="alert alert-danger" style="display: none"></div>
+			</div>
+		</div>
+		<div class="row">
+            <br><br><br>
+							<div class="col-md-12">
+
+				<div class="panel panel-default" style="margin-top: 0px;">
+					<div id="namebox" class="panel-heading"><?=$accountPage['title']?></div>
+					<div class="panel-body">
+						<? include dirname(__FILE__).'/account/'.$accountPage['content'].'.php'; ?>
+					</div>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,750 @@
+.SideBarHome {
+	width: 950px;
+	font-family: Tahoma;
+    font-size: 12px;	
+    padding: 0;
+    position: relative;
+	display: none;
+	overflow: hidden;
+	z-index: 5;
+	background: #fef5e7 url(../images/home-bg.jpg) 0 0 repeat-y;
+}
+.HomeWrapper {	 	
+	overflow: hidden;
+	display: block;
+	width: 950px;
+	background:  url(../images/bg-home.jpg) no-repeat;
+}
+
+
+.HeaderHome {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 130px;
+	z-index: 1;
+}
+.HeaderHome a.DangKy:link,
+.HeaderHome a.DangKy:visited {
+	background: url(../images/button-home.png) 0px 0 no-repeat;
+	display: block;
+	overflow: hidden;
+	width: 130px;
+	height: 76px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 35px;
+	left: 250px;
+}
+.HeaderHome a.DangKy:hover {
+	background-position: 0 -76px;
+}
+.HeaderHome a.NapThe:link,
+.HeaderHome a.NapThe:visited {
+	background: url(../images/button-home.png) -130px 0px   no-repeat;
+	display: block;
+	overflow: hidden;
+	width: 190px;
+	height: 76px;
+	position: absolute;
+	top: 35px;
+	left: 380px;
+	color: #ffe792;
+	text-align: center;
+	text-decoration: none;
+}
+.HeaderHome a.NapThe:hover {
+	background-position: -130px -76px
+	text-decoration: none;
+}
+.HeaderHome a.NapThe span {
+	color: #fffb00;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 1px 1px #000;
+	padding: 22px 10px 0 0;
+	display: block;
+	text-align: right;
+	line-height: 25px;
+}
+.HeaderHome a.HuongDan:link,
+.HeaderHome a.HuongDan:visited {
+	background: url(../images/button-home.png) -320px 0 no-repeat;
+	display: block;
+	overflow: hidden;
+	width: 130px;
+	height: 76px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 35px;
+	left: 570px;
+}
+.HeaderHome a.HuongDan:hover {
+	background-position: -320px -76px;
+}
+.HeaderHome a.ChoiGunny:link,
+.HeaderHome a.ChoiGunny:visited {
+	background: url(../images/bt-choi-gunny.gif)   0 no-repeat;
+	display: block;
+	overflow: hidden;
+	width: 165px;
+	height: 103px;
+	text-indent: -9999px;
+	position: absolute;
+	top: 16px;
+	left: 785px;
+}
+.HeaderHome a.ChoiGunny:hover {
+	background: url(../images/bt-choi-gunny-hover.gif)   0 no-repeat;
+}
+
+#homeMain {
+	width: 910px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 0 0 20px;
+	display: block;
+}
+#homeSidebar {
+	width: 220px;
+	display: block;
+	padding-top: 0px;
+	float: left;
+}
+#homeMainContent {
+	width: 680px;
+	float: right;
+	overflow: hidden;
+}
+#insideMainContent {
+	width: 450px;
+	float: left;
+	overflow: hidden;
+	margin-top: 8px;
+}
+#sidebarContent {
+	width: 220px;
+	float: right;
+	overflow: hidden;
+	padding-top: 10px;
+}
+/*top cao thu*/
+.BlockNav {
+	display: block;
+	overflow: hidden;
+	height: 310px;
+}
+.TopCaothu {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	top: 7px;
+	background: url(../images/bg-lich.jpg)  0 -299px no-repeat;
+	padding-top: 32px;
+}
+
+.BlockNews ul.Tab {
+	height:46px;
+	width:420px;
+	overflow:hidden;
+	background:url(../images/tab-news1.png) 0 0px no-repeat;
+	padding-left:172px;
+	
+}
+.BlockNews a.News {
+	position:absolute;
+	top:10px;
+	left:45px;
+	width:60px;
+	height:25px;
+	display:block;
+	text-indent:-9999px;
+}
+.TopCaothu ul.Tab {
+	height:29px;
+	width:222px;
+	overflow:hidden;
+	padding:0;
+	border-bottom:#aa8655 solid 2px;
+	
+}
+.TopCaothu ul.Tab li {
+	float:left;
+	font-size:11px;
+	font-weight:bold;
+	margin-right: 3px; 
+}
+.TopCaothu ul.Tab li.Last {
+	
+	margin-right: 0px; 
+}
+.TopCaothu ul.Tab li a {
+	background:url(../images/tab-top-left-unactive.gif) no-repeat 0px 0;
+	color:#967a54;
+	display:block;
+	padding:0 0 0 3px;
+	text-decoration:none;
+}
+.TopCaothu ul.Tab li a:hover, .TopCaothu ul.Tab li.ui-state-active a {
+	background:url(../images/tab-top-left-active.gif) no-repeat 0px 0px;
+	color:#5e452e;
+	cursor:pointer;
+	padding:0 0 0 3px;
+}
+.TopCaothu ul.Tab li a span {
+	background:url(../images/tab-top-right-unactive.gif) no-repeat right top;
+	color:#967a54;
+	display:block;
+	padding:6px 3px 5px 0;
+}
+.TopCaothu ul.Tab li a:hover span, .TopCaothu ul.Tab li.ui-state-active a span {
+	background:url(../images/tab-top-right-active.gif) no-repeat right top;
+	color:#5e452e;
+	cursor:pointer;
+}
+.TopCaothu .TopCaoThuContent {
+	width:100%;
+}
+.TopCaoThuContent .SubTab {
+	overflow:hidden;
+	padding:4px 0 0 0px;
+	height:23px;
+}
+.TopCaoThuContent .SubTab li {
+	float:left;
+	margin-right:3px;
+	position:relative;
+	display:block;
+}
+.TopCaoThuContent .SubTab li a {
+	display:block;
+	float:left;
+	background:url(../images/subtabn.gif) no-repeat 0 1px;
+	padding: 0 0 0 4px
+}
+.TopCaoThuContent .SubTab li a span {
+	font-size:11px;
+	color:#fff5e2;
+	display:block;
+	float:left;
+	background:url(../images/subtabn-right.gif) no-repeat right 1px;
+	padding:0 4px 0 0;
+	font-weight:bold;
+}
+.TopCaoThuContent .SubTab li a:hover, .TopCaoThuContent .SubTab li.ui-state-active a {
+	display:block;
+	float:left;
+	background:url(../images/subtab.gif) no-repeat 0 1px;
+	padding: 0 0 0 4px;
+	text-decoration:none;
+}
+.TopCaoThuContent .SubTab li a:hover span, .TopCaoThuContent .SubTab li.ui-state-active a span {
+	font-size:11px;
+	color:#ffe082;
+	display:block;
+	float:left;
+	background:url(../images/subtab-right.gif) no-repeat right 1px;
+	padding:0 4px 0 0;
+}
+.TopCaoThuContent .SubTab li a:hover span.ArrowDown, .TopCaoThuContent .SubTab li.ui-state-active a span.ArrowDown {
+	display:block;
+	position:absolute;
+	left:47%;
+	top:18px;
+	background:url(../images/arrow-down.gif) no-repeat;
+	width:7px;
+	height:4px;
+}
+.TopCaoThuContent .SubTab li a span.ArrowDown {
+	display:none;
+}
+
+
+
+
+ul.TopCaoThu li {
+	display:block;
+	overflow:hidden;
+	width:100%;
+	line-height:20px;
+
+}
+ul.TopCaoThu li.NoBorder {
+	border:none;
+} 
+ul.TopCaoThu li p {
+	float:left;
+	color:#573700;
+	
+}
+ul.TopCaoThu li p.STT {
+	background: url(../images/bg-stt-top.gif) left 1px no-repeat;
+	color:#fff;
+	font-size:11px;
+	font-weight:bold;
+	margin-left:10px;
+	width:14px;
+}
+ul.TopCaoThu li.New p.STT {
+	background: url(../images/bg-stt-top.gif) left -32px no-repeat;
+	color:#fff;
+}
+ul.TopCaoThu li p.NhanVat {
+	
+	width:150px;
+}
+ul.TopCaoThu li.New p.NhanVat {
+	
+	font-weight:bold;
+	color:#b23600;
+}
+ul.TopCaoThu li p.Cap {
+	
+	width:35px;
+}
+ul.TopCaoThu li p.Diem {
+	
+	width:35px;
+}
+ul.TopCaoThuHead li p {
+	float:left;
+	color:#573700;
+	
+}
+ul.TopCaoThuHead li p.STT {
+	
+	width:33px;	color:#573700;
+	font-size:11px;
+	font-weight:bold;	
+}
+ul.TopCaoThuHead li p.NhanVat {
+	
+	font-weight:bold;
+	color:#573700;
+	width:150px;
+	
+}
+ul.TopCaoThuHead li p.Diem {
+	
+	width:60px;
+	font-weight:bold;
+}
+
+select#rankingByType, select#rankingByServer{
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #b00206, 0 -1px #b00206 inset;
+    -moz-box-shadow: 0 3px 0 #b00206, 0 -1px #b00206 inset;
+    box-shadow: 0 3px 0 #b00206, 0 -1px #b00206 inset;
+    background: #DA181A;
+    color:#fff;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+.TopCaoThuContent .SubTab li a span {
+	text-align:  center;
+
+}
+ul.TopCaoThu li p.STT {
+	text-align: center;
+	margin: 0 10px 0 10px;
+}
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label.rankingLabel  {position:relative}
+label.rankingLabel:after  {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#fff;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:0px;
+    padding:0 0 2px;
+    
+    position:absolute;
+    pointer-events:none;
+}
+label.rankingLabel:before{
+    content:'';
+    right:6px; top:-2px;
+    width:20px; height:19px;
+    background:#D51619;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+	.TopName a {
+		width: 108px;
+	}
+	.TopName a span {
+		width: 106px;
+	}
+	.TopPoint a {
+		width: 60px;
+	}
+	ul.TopCaoThu li p.NhanVat {
+		width: 130px;
+	}
+
+/*end top cao thu*/
+
+
+.TimKiem{ 
+	width:450px; 
+	margin:0; 
+	overflow:hidden;
+	padding:2px 0 0 0px;
+ }
+.TimKiem h2.TitleTimKiem{
+	display:none;
+}
+.TimKiem .SearchBtn { 
+	border:none;  
+	cursor:pointer;
+	width:39px;
+	height:30px;
+	color:#351401;
+	font-weight:bold;
+	background:url(../images/btn-tim.gif) right top no-repeat;
+	text-indent:-9999px; 
+
+}
+.TimKiem .SearchBtn:hover {
+ 	color:#B33401;
+ }
+.BgTextbox{
+	border:1px solid #eab10b;
+	width:397px;
+	background:#fff;
+	padding:7px 4px 7px 8px;
+	margin:0;
+	color:#666666;
+	font-size:12px;
+	line-height:14px;
+	float:left;
+	
+}
+.BtTimKiem{ float:right; border:none; padding:0; margin:0px; margin-top:2px}
+
+
+ul.Banner{ 
+	width:450px; 
+	overflow:hidden; 
+	list-style-type:none; 
+	margin-bottom:0px;
+}
+ul.Banner li{ 
+	float:left; 
+	margin-right:10px;
+}
+ul.Banner li img{ 
+	display:block;
+	border:#d7c29f solid 1px;
+}
+ul.Banner li.Non-mar{ float:left; margin-right:0}
+
+ul.HoTro {
+	display: block;
+	overflow: hidden;
+	width: 220px;
+
+}
+ul.HoTro li {
+	overflow: hidden;
+	display: block;
+
+}
+ul.HoTro li a:link,
+ul.HoTro li a:visited {
+	background: url(../images/home-bg-ho-tro.jpg)  0 -160px no-repeat;
+	width: 220px;
+	height: 80px;
+	overflow: hidden;
+	display: block;
+	text-indent: -9999px;
+}
+ul.HoTro li a:hover {
+	background-position: -220px -160px;
+}
+
+ul.HoTro li a.BaoTri:link,
+ul.HoTro li a.BaoTri:visited {
+	background-position: 0px -240px;
+}
+
+ul.HoTro li a.BaoTri:hover {
+	background-position: -220px -240px;
+}
+ul.HoTro li a.Log:link,
+ul.HoTro li a.Log:visited {
+	background-position: 0px -320px;
+}
+
+ul.HoTro li a.Log:hover {
+	background-position: -220px -320px;
+}
+
+/* Tham do y kien*/
+.ThamDo{
+	width:220px;
+	overflow:hidden;
+	margin-top:0px;
+	background:url(../images/bg-tkyk.gif) right top repeat-y;
+}
+.ThamDoTop{
+	width:100%;
+	background:url(../images/bg-tkyk-top.gif) top no-repeat;
+	overflow:hidden
+}
+.ThamDo h2{
+	width:100%;
+	height:42px;
+	text-indent:-9999px;
+	display:block;
+}
+
+.ThamDoContent{
+	width:177px;
+	margin-left:0px;
+	padding-bottom:20px;
+	background:url(../images/bg-tkyk-bt.gif) 0 bottom no-repeat;
+	padding-left:43px;
+}
+	
+.ThamDoContent p{ padding:5px 10px 0px 10px; text-align:justify; color:#573700}
+.ThamDoContent ol{ margin:0 10px 0 20px; padding-left:10px; list-style:decimal }
+.ThamDoContent ol li{ list-style:decimal }
+.ThamDoContent a:link,
+.ThamDoContent a:visited{ color:#573700}
+.ThamDoContent a:hover{ color:#990000}
+
+a.KhaoSat{
+ background:url(../images/khao-sat.gif) 0 -37px no-repeat;
+  width:110px; 
+  height:35px;  
+  z-index:2; 
+  display:block; 
+  margin:15px 0 0 30px;
+  text-indent:-9999px
+}
+a.KhaoSat:hover{
+ background:url(../images/khao-sat.gif) 0 0px no-repeat;  
+}
+
+.ThamDoContent a.Like{
+ background:url(../images/likepage.png) 0 0px no-repeat;
+  width:72px; 
+  height:37px;  
+  z-index:2; 
+  display:block; 
+  text-indent:-9999px;
+  float:left;
+  margin:0 0 0 15px;
+}
+.ThamDoContent  a.Like:hover{
+ background:url(../images/likepage.png) 0px -37px no-repeat;  
+}
+
+.ThamDoContent a.DisLike{
+ background:url(../images/likepage.png) -72px 0 no-repeat;
+  width:72px; 
+  height:37px;  
+  z-index:2; 
+  display:block; 
+  text-indent:-9999px;
+  margin:0 0 0 87px;
+}
+.ThamDoContent  a.DisLike:hover{
+ background:url(../images/likepage.png) -72px -37px  no-repeat;  
+}
+.ThamDoContent label {
+	color: #762809;
+	font-weight: bold;
+}
+#sauKhaoSat {
+	display: none;
+}
+
+.AdsHome img {
+	border: #d7c29f solid 1px;
+	margin-top: 10px;
+}
+
+#footerHome{
+	width: 100%;
+	margin-top: 10px;
+	
+}
+.BgFooter{
+	width:950px;
+	height:109px;
+	background:url(../images/home-footer.jpg) center top no-repeat;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+.LogoVNG{ 
+	background:url(../images/logo-vng.png) no-repeat; 
+	width:36px; 
+	height:53px; 
+	position:absolute; 
+	z-index:1; 
+	top:23px; 
+	left:119px; 
+	display:block; 
+}
+.LogoVNG a{
+	display:block; 
+	width:36px; 
+	height:53px; 
+	text-indent:-9999px;	
+}
+.LogoRoad{ 
+	background:url(../images/logo-7road.png) no-repeat; 
+	width:43px; 
+	height:58px; 
+	position:absolute; 
+	z-index:2; 
+	top:26px; 
+	left:178px; 
+	display:block; 
+	text-indent:-9999px;
+}
+.LogoRoad a{
+	width:32px; 
+	height:30px; 
+	display:block; 
+	text-indent:-9999px;
+}
+a.Rating{ 
+	background:url(../images/fRating.jpg) no-repeat; 
+	width:151px; 
+	height:74px; 
+	position:absolute; 
+	z-index:2; 
+	top:15px; 
+	left:704px; 
+	display:block; 
+	text-indent:-9999px;
+}
+.Copyright{ 
+	text-align:left; 
+	padding:34px 0 0 240px; 
+	font-size:11px; 
+	line-height:17px; 
+	color:#ca8d2c;
+}
+.SideBar {
+	position: relative;
+	width: 251px;
+	overflow: hidden;
+	display: block;
+}
+#iframeGame img {
+	/*width: 100%*/
+}
+#flashContent {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*style css khao sat id*/
+
+/* Tham do y kien*/
+.ThamDo2{
+	width:180px;
+	overflow:hidden;
+	margin-top:0px;
+	background:url(../images/home-khaosat-loop.jpg) left top repeat-y;
+	position: fixed;
+	right: 0;
+	top: 120px;
+}
+.ThamDo2 .ThamDoTop{
+	width:100%;
+	background:url(../images/home-khaosat.jpg) top no-repeat;
+	overflow:hidden;
+	padding-top: 45px;
+}
+
+
+.ThamDo2 .ThamDoContent{
+	width:170px;
+	margin-left:0px;
+	padding-bottom:20px;
+	background:url(../images/home-khaosat-bottom.jpg) 0 bottom no-repeat;
+	padding-left:10px;
+
+}
+	
+.ThamDo2 .ThamDoContent p{ padding:5px 15px 0px 10px; text-align:justify; color:#573700; font-size: 11px; line-height: 16px;}
+.ThamDo2 .ThamDoContent ol{ margin:0 10px 0 20px; padding-left:10px; list-style:decimal }
+.ThamDo2 .ThamDoContent ol li{ list-style:decimal }
+.ThamDo2 .ThamDoContent a:link,
+.ThamDo2 .ThamDoContent a:visited{ color:#573700}
+.ThamDo2 .ThamDoContent a:hover{ color:#990000}
+
+.ThamDo2 a.KhaoSat{
+ background:url(../images/khao-sat.gif) 0 -37px no-repeat;
+  width:110px; 
+  height:35px;  
+  z-index:2; 
+  display:block; 
+  margin:15px 0 0 30px;
+  text-indent:-9999px
+}
+.ThamDo2 a.KhaoSat:hover{
+ background:url(../images/khao-sat.gif) 0 0px no-repeat;  
+}
+
+.ThamDo2 .ThamDoContent a.Like{
+ background:url(../images/like-dislike.jpg) 0 0px no-repeat;
+  width:71px; 
+  height:35px;  
+  z-index:2; 
+  display:block; 
+  text-indent:-9999px;
+  float:left;
+  margin: 5px 0 5px 10px;
+}
+.ThamDo2 .ThamDoContent  a.Like:hover{
+ background:url(../images/like-dislike.jpg) 0px -35px no-repeat;  
+}
+
+.ThamDo2 .ThamDoContent a.DisLike{
+ background:url(../images/like-dislike.jpg) -71px 0 no-repeat;
+  width:71px; 
+  height:35px;  
+  z-index:2; 
+  display:block; 
+  text-indent:-9999px;
+  margin: 5px 0 5px 82px;
+}
+.ThamDo2 .ThamDoContent  a.DisLike:hover{
+ background:url(../images/like-dislike.jpg) -71px -35px  no-repeat;  
+}
+.ThamDo2 .ThamDoContent label {
+	color: #762809;
+	font-weight: bold;
+}
+
+#sauKhaoSat2 {
+	display: none;
+}
+/*end style css khao sat id*/

@@ -1,0 +1,90 @@
+<?php
+if(!defined("SNAPE_VN")) die('No access');
+
+?>
+<script type="text/javascript">
+$(document).ready(function () {
+	
+});
+
+var isShare = false;
+
+function showGiftcode(type) {
+	$('#evt_'+type).html(createSelectServer(type) + '<input type="submit" class="btn btn-primary btn-block" value="Nhận Giftcode" onclick="getGiftcode(\''+type+'\')">');
+}
+
+function createSelectServer(type) {
+	var text = '<select id="txtServer_'+type+'" name="txtServer_'+type+'" class="form-control">';
+	<?php
+		// load server list
+		$loadserver = loadallserver();
+		while($svInfo = sqlsrv_fetch_array($loadserver, SQLSRV_FETCH_ASSOC)) {
+			echo 'text += \'<option value="'.$svInfo['ServerID'].'">'.$svInfo['ServerName'].'</option>\';';
+		}
+	?>
+	text += '</select>';
+	
+	return text;
+}
+
+function getGiftcode(type) {
+	var serverid = $("#txtServer_"+type).val();
+	
+	if(type == 10 && isShare == false) {
+		// share it
+		shareFacebook(type);
+	} else {
+		$("#evt_"+type).html("<img src='<?=$_config['page']['fullurl']?>/images/loading.gif' />");
+		$.post("<?=$_config['page']['fullurl']?>/form/receivecode.php", "id="+type+"&sv=" + serverid,
+			function (json) {
+				if(json['type'] == 0) {
+					$("#evt_"+type).html("<font color='blue'><b>"+json['content']+"</b></font>");
+				} else {
+					$("#evt_"+type).html("<font color='red'>"+json['content']+"</font>");
+				}
+		}, 'json');
+	}
+}
+
+function showEvent(type) {
+	$("#ev_"+type).html("<img src='<?=$_config['page']['fullurl']?>/images/loading.gif' />");
+	$.post("<?=$_config['page']['fullurl']?>/form/receiveevent.php", "id="+type,
+		function (json) {
+			if(json['type'] == 0) {
+				$("#ev_"+type).html("<font color='blue'><b>"+json['content']+"</b></font>");
+			} else {
+				$("#ev_"+type).html("<font color='red'>"+json['content']+"</font>");
+			}
+	}, 'json');
+}
+
+function shareFacebook(type) {
+	
+	var e = {
+		method: "feed",
+		picture: "https://scontent-xsp1-1.xx.fbcdn.net/v/t1.0-9/90233760_2855694517845096_4813034957142228992_n.png?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=fpdCQ4qN5ZUAX-rxE3T&_nc_ht=scontent-xsp1-1.xx&oh=7e8de46ce41d30c22eef28242e7a2983&oe=5EA5CE83",
+		link: "http://GunBaChay.Net/",
+		name: "gunbachay.net - Gunny Miễn Phí Đỉnh Cao phiên bản Sức Mạnh thời Trang",
+		caption: 'https://www.facebook.com/GunV55/photos/a.1286064121474818/2855694514511763/?type=3&__xts__%5B0%5D=68.ARDa8uhAaNWuHxKPzAFwgykAhtOAHt4enhm0dQ4SHI8LwM7MjKGKtXLWChqUoi1gMBZP6evHr13o-QcMLzGKhHAQvn9hlXn_rr_BtsUphpaxNBK3ygHo6BdBxf07Jo8JCQdbMO7bVdzNGFv5PtXbuQIGBtZakHeogZGrek-Y8J6JXgf7lxwo6AnPfwAeBkrwtMPCOQzU5tFwIVQ79fhgaMcZRrjLszhR8kkq20TfuZzbXcuvmUCP4rRHHaK23nVkPnbcHjkFjnB2VQQyPTwD6-up7fQPA4FMer3uzxqxpLAMG_ru0rgJOaUicGRA3-wYeuiNFnQRBbP3VJt89eo3OLFXfyOc&__tn__=-R',
+		description: "gunbachay.net - Gunny Miễn Phí Đỉnh Cao phiên bản Sức Mạnh thời Trang."
+	};
+	
+	FB.ui(e, function(t) {
+		isShare = true;
+		getGiftcode(type);
+	})
+}
+
+</script>
+						<div class="center-block">
+							<table class="table table-hover">
+
+								<tr>
+									<td>Giftcode Code Tân Thủ 2</td>
+									<td id="evt_13"><a href="javascript:;" onclick="showGiftcode(13)">[Hiện mã giftcode]</a></td>
+								</tr>
+																		 <center><b><p class="text-danger">Khi nhận xong code vui lòng vào <img width=70 src="/images/hapdan.png"> Ingame để đổi thưởng ! Chúc bạn chơi game vui vẻ </a> </p></center>
+
+							</table>
+							
+						</div>

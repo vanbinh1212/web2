@@ -1,0 +1,105 @@
+<?php
+if(!defined("SNAPE_VN")) die('No access');
+
+if(!$account->isLogin())
+	movepage($_config['page']['fullurl'].'/dang-nhap/?return='.base64currenturl());
+
+
+$email = $_SESSION['ss_user_email'];
+  $status1 = "status s1";
+   	$names1 = "Gà Billy";
+?>
+<script type="text/javascript" src="<?=$_config['page']['fullurl']?>/js/load_news.js"></script>
+<script type="text/javascript">
+
+        $(document).ready(function () {
+        	SnapeNews.init(1);
+				$.fancybox("#event_news_content");
+
+			SnapeGuild.guildHome().show();
+			 var button = document.getElementById("btn");
+			 button.onclick = function(){
+                alert("Máy chủ đang bảo trì tới 1h 15/1 ");
+             }
+			// var button = document.getElementById("btn1");
+             // button.onclick = function(){
+                // alert("Máy chủ đang bảo trì tới 1h 15/1 ");
+            // }
+
+			// var button = document.getElementById("btn2");
+
+        });
+    </script>
+	<div id="event_news_content" align="center" style="display:none;">
+	<p><b><img src="/images/hot.gif" /><a href="https://www.facebook.com/Gunbachay2022" target="_blank"><font color=red size=3>Liên hệ Admin nhận GIFTCODE </font></a><img src="/images/hot.gif" /></b></p>
+	<p><a href="https://www.facebook.com/groups/gunbachay2022/" target="_blank"><font color=blue size=3><b>HỘI NHÓM CHIA SẺ KINH NGHIỆM VÀ PHẦN THƯỞNG</b></font></a></p>
+	
+	
+
+		<p><a href="https://www.gunbachay.net/launcher.exe"><img src="/images/laucher-gunny.jpg" /></a></p>
+
+	
+	
+</div>
+	
+	<div style="height:250px;"></div>
+			<div class="container">
+			
+		<section class="game-content-wrapper container-fluid no-padding">
+		
+		<div class="game-server-wrapper">
+			
+			<div class="row">
+				<div class="col-md-6 ">
+					<div class="game_container">
+						<div class="frame ddt-game-border">
+						<!--a href="../play.php?id=1001"-->
+							<img src="<?=$_config['page']['fullurl']?>/images/moinhat.png"><span class="top_title"></span>
+																<!--a href="<?=$_config['page']['fullurl']?>/play.php?id=1006"-->
+																<a href="<?=$_config['page']['fullurl']?>/play.php?id=1001">
+																	<div class="game-button game-button-bg ddt-game-border pull-right text-center"><div class="game_status pull-left"><div class="<?=$status1?>"></div></div><span class="server_font"><?=$names1?></span></div>		
+
+													</div></a>
+					</div>
+				</div>
+
+				<div class="col-md-12">
+					<div class="game_container">
+						<div class="inner-frame ddt-game-border">
+						<div class="row">
+							<div class=" margin-center mb-15 mt-15" style="display:table">
+							<div class=" cl-3 text-center">
+								<div class="game-button text-center margin-center"><div class="game_status pull-left"><div class="status s1"></div></div><span class="pull-left text-bold">Ổn định</span></div>		
+							</div>
+							<div class=" cl-3 text-center">
+								<div class="game-button text-center margin-center"><div class="game_status pull-left"><div class="status s2"></div></div><span class="pull-left text-bold">Quá Tải</span></div>		
+							</div>
+							<div class="cl-3 text-center">
+								<div class="game-button text-center margin-center"><div class="game_status pull-left"><div class="status s3"></div></div><span class="pull-left text-bold">Bảo Trì</span></div>		
+							</div>
+							<div class=" cl-3  text-center"> 
+								<div class="game-button text-center margin-center"><div class="game_status pull-left"><div class="status s4"></div></div><span class="pull-left text-bold">Sắp ra mắt</span></div>		
+							</div>
+							</div>
+							
+							<div class="cl-12 text-center ">
+		
+					
+							<div class="cl-3 mb-10">
+															
+									<div class="game-button ddt-game-border margin-center text-center " data-game-server="ddt_s45"><div class="game_status  pull-left"><div class="<?=$status1?>"></div></div><span class="server_font"><a href="<?=$_config['page']['fullurl']?>/play.php?id=1001" target="_blank"><?=$names1?></a></span></div>
+								
+									</div>			
+		
+							</div>
+						</div>
+					</div>
+				</div>
+
+		
+			
+			
+		</div>
+	</section>
+		<div style="height:200px;"></div>
+		</div>

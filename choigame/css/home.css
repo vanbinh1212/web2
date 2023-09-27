@@ -1,0 +1,478 @@
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+
+
+
+
+.zingMeBannerPopup{
+	
+	   background: none!important;
+    height: 498px!important;
+    position: absolute !important;
+    width: 719px !important;
+	top:58px !important;
+	left: 26px !important;
+    z-index: 1000;
+}
+.zingMeBannerPopup #btClose {
+    cursor: pointer;
+    position: absolute;
+    right: 11px !important;
+    top: 46px !important;
+    z-index: 101;
+}
+.zingMeBannerPopup a#btClose:link, .zingMeBannerPopup a#btClose:visited {
+    background: url("../images/popup-idlogin-close.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    text-indent: -9999px;
+    top: 0;
+    width: 30px;
+}
+.zingMeBannerPopup a#btClose:hover {
+    background-position: -30px 0px;
+}
+
+a.DoiServer:link,
+a.DoiServer:visited {
+	background:url(../images/doi-server.png) no-repeat;
+	width: 80px;
+	height: 30px;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: 132px;
+	top: 102px;
+	text-indent: -9999px;
+	display: none;
+}
+a.DoiServer:hover{
+	background-position: 0 -30px;
+}
+a.BtnChoiNgay:link,
+a.BtnChoiNgay:visited {
+	background:url(../images/btn-choi-ngay.png) no-repeat;
+	width: 141px;
+	height: 31px;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: 352px;
+	top: 140px;
+	text-indent: -9999px;
+}
+a.BtnChoiNgay:hover{
+	background-position: 0 -31px;
+}
+/*******Server*********/
+.NewServer {
+	width: 500px;
+	margin: 32px 0 51px 19px;
+	overflow: hidden;
+}
+.NewServer a {
+	background:url(../images/bg-servernew.png) no-repeat;
+	width: 167px;
+	height: 39px;
+	padding: 26px 0px 0 65px;
+	text-transform: uppercase;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #001424;
+	float: left;
+	margin-right: 8px;
+}
+.NewServer a:hover {
+	background:url(../images/bg-servernew-o.png) no-repeat;
+	text-decoration: none;
+}
+.NewServer a.DongNhat{
+	background:url(../images/bg-server-2.png) no-repeat;
+}
+.NewServer a.DongNhat:hover {
+	background:url(../images/bg-server-2-o.png) no-repeat;
+	text-decoration: none;
+}
+.InfoServer {
+	width: 500px;
+	margin: 140px 0 0 135px;
+}
+.UserInfo {
+	color: #705800;
+	display: block;
+	font-size: 12px;
+	height: 25px;
+	margin: 5px 0 0;
+}
+.UserInfo p {
+	font-weight: bold;
+	float: left;
+	overflow: hidden;
+	padding: 0 0 0 180px;
+	width: 185px;
+	overflow: hidden;
+}
+.UserInfo p .Username {
+	color: #ae3900;
+}
+.UserInfo a:link, .UserInfo a:visited {
+	color: #705800;
+	padding: 0 18px 0 0;
+	float: right;
+	font-weight: bold;
+}
+.UserInfo a:hover {
+	text-decoration: underline;
+}
+.ListServer {
+	width: 500px;
+	margin: 0 0 0 23px;
+	overflow: hidden;
+	position: relative;	
+}
+#nav {
+	background: url(../images/chon-may-chu.gif) no-repeat;
+	overflow: hidden;
+	width: 500px;
+	height: 265px;
+	padding: 0 0 0 00px;
+	float: left;
+	clear: both;
+}
+ul#tabHeader {
+	height: 30px;
+	overflow: hidden;
+	width: 100%;
+}
+#boxTab ul#tabHeader {
+	margin: 0;
+}
+ul#tabHeader li {
+	float: left;
+	font-weight: bolder;
+	line-height: 20px;
+	overflow: hidden;
+	width: 67px;
+	height: 24px;
+	margin: 6px 3px 0 0;
+}
+ul#tabHeader li:last-child {
+	margin: 6px 0 0 0;
+}
+ul#tabHeader li a:link, ul#tabHeader li a:visited {
+	background: url(../images/bt-tab.gif) no-repeat 0px 0px;
+	cursor: pointer;
+	float: left;
+	width: 68px;
+	height: 30px;
+	text-decoration: none;
+	color: #fcd985;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 28px;	
+}
+ul#tabHeader li.Last a:link, ul#tabHeader li.Last a:visited {
+	background: url(../images/bt-tab.gif) no-repeat 0px 0px;
+}
+ul#tabHeader li.ui-tabs-selected a:link, ul#tabHeader li.ui-tabs-selected a:visited, ul#tabHeader li.ui-state-active a:link, ul#tabHeader li.ui-state-active a:visited, ul#tabHeader li.ui-tabs-selected.Last a:link, ul#tabHeader li.ui-tabs-selected.Last a:visited, ul#tabHeader li.ui-state-active.Last a:link, ul#tabHeader li.ui-state-active.Last a:visited {
+	background-position: 0 -30px;
+	color: #b23600;
+}
+ul#tabHeader li a:hover, ul#tabHeader li.Last a:hover {
+	background-position: 0 -30px;
+	color: #b23600;
+}
+ul#tabHeader li.Active a:link, ul#tabHeader li.Active a:visited, ul#tabHeader li.Active.Last a:link, ul#tabHeader li.Active.Last a:visited {
+	background-position: 0 -30px;
+	color: #b23600;
+}
+#nav ul.ServerList {
+	list-style:none;
+	overflow:hidden;
+	display: none;
+	margin: 10px 0 0;
+}
+#nav ul.ServerList.Active {
+	display: block;
+}
+#nav ul.ServerList li {
+	float:left;
+	margin:0 20px 5px 0px;
+	position:relative;
+}
+#nav ul.ServerList li a:link, #nav ul.ServerList li a:visited {
+	background: url(../images/button-server1.png) no-repeat;
+	color: #000;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 24px;
+	padding: 9px 0 7px 52px;
+	text-decoration: none;
+	width: 138px;
+}
+#nav ul.ServerList li a:hover {
+	background: url(../images/button-server1-o.png) no-repeat;
+}
+#nav ul.ServerList li a span {
+	color: #fff000;
+	display: block;
+	font-size: 11px;
+	font-weight:bold;
+	line-height: 24px;
+	padding-right:4px;
+	float:left;
+	position:absolute;
+	top: 7px;
+	left:14px;
+	width:25px;
+	height:30px;
+	text-align: center;
+}
+#nav ul.ServerList li span.Check {
+	background: url(../images/check.png) no-repeat;
+	position: absolute;
+	right: 8px;
+	top: 15px;
+	width: 24px;
+	height: 21px;
+}
+#nav p.flashwarning {
+	text-align:center;
+}
+#nav ul.ServerList li a span.Tot {
+	background:url(../images/icon-trang-thai.png) no-repeat;
+	display:block;
+	height:12px;
+	left:41px;
+	position:absolute;
+	text-indent:-9999px;
+	top:16px;
+	width:15px;
+	z-index:2;
+}
+#nav ul.ServerList li a span.Day {
+	background:url(../images/icon-trang-thai.png) -120px 0 no-repeat;
+	display:block;
+	height:12px;
+	left:41px;
+	position:absolute;
+	text-indent:-9999px;
+	top:16px;
+	width:15px;
+	z-index:2;
+}
+#nav ul.ServerList li a span.GanDay {
+	background:url(../images/icon-trang-thai.png) -50px 0 no-repeat;
+	display:block;
+	height:12px;
+	left:41px;
+	position:absolute;
+	text-indent:-9999px;
+	top:16px;
+	width:15px;
+	z-index:2;
+}
+#nav ul.ServerList li a span.BaoTri {
+	background:url(../images/icon-trang-thai.png) -170px 0 no-repeat;
+	display:block;
+	height:12px;
+	left:41px;
+	position:absolute;
+	text-indent:-9999px;
+	top:16px;
+	width:15px;
+	z-index:2;
+}
+/* Pagination */
+.PagingWrapper {
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+	margin-bottom: 10px;
+}
+.PagingControl {
+	position: relative;
+	left: -50%;
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+.CenterWrapper {
+	position: relative;
+	left: 50%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+.PagingControl span.PagingPrevPageLnk, .PagingControl span.PagingNextPageLnk, .PagingControl a.PagingPrevPageLnk, .PagingControl a.PagingNextPageLnk {
+	display: block;
+	width: 24px;
+	height: 0;
+	padding: 14px 0 10px;
+	overflow: hidden;
+	text-indent: -1000em;
+	float: left;
+	position: relative;
+}
+.PagingControl span.PagingPrevPageLnk, .PagingControl span.PagingNextPageLnk {
+	opacity: 0.3;
+	-moz-opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+/* Normal states */
+.PagingControl span.PagingPrevPageLnk, .PagingControl a.PagingPrevPageLnk {
+	width: 24px;
+	margin: 0 17px 0 0;
+	background: url(../images/bt_pre.gif) 0 0 no-repeat
+}
+.PagingControl span.PagingNextPageLnk, .PagingControl a.PagingNextPageLnk {
+	width: 24px;
+	margin: 0 0 0 17px;
+	border-right: none;
+	background: url(../images/bt_next.gif) 0 0 no-repeat
+}
+/* Hover&Disabled states */
+		
+		.PagingControl a.PagingPrevPageLnk:hover {
+	background-position: 0 -24px;
+}
+.PagingControl a.PagingNextPageLnk:hover {
+	background-position: 0 -24px;
+}
+/* Number list */
+.PagingControl ul.PageList {
+	float: left;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.PagingControl ul.PageList li {
+	float: left;
+	padding: 0;
+	margin: 0 5px;
+	overflow: hidden;
+}
+.PagingControl ul.PageList li span { /* active item */
+	display: block;
+	float: left;
+	line-height: 24px;
+	width: 24px;
+	height: 24px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	color: #FFF;	
+	background: url(../images/bt_page.gif) no-repeat -24px 0;
+}
+.PagingControl ul.PageList li a:link, .PagingControl ul.PageList li a:visited {
+	display: block;
+	float: left;
+	white-space: nowrap;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	text-align: center;
+	color: #c03b00;
+	font-weight: bold;
+	background: url(../images/bt_page.gif) no-repeat;
+	text-decoration: none;	
+}
+.PagingControl ul.PageList li a:hover { /* active item */
+	background-position: -24px 0;
+	color: #fff;
+}
+/* END. Pagination */
+
+
+div.Clear {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+
+
+
+.LabelServer {
+	font-size: 12px;
+	text-transform: none;
+	text-align: left;
+	padding-bottom: 20px;
+}
+.BoxServer {
+	width: 440px;
+	float: left;
+	overflow: hidden;
+	padding-left: 27px;
+}
+
+.PopupNewServer a {
+	display: block;
+	text-indent: -9999px;
+	position: absolute;
+}
+
+/*update 18-03*/
+#thewindowbackground {
+	display: block;
+}
+
+.BtClose {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	padding: 3px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #000;
+	display: block;
+	text-indent: 0 !important;
+}
+
+
+
+.Content {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 550px;
+	background: url(../images/server-bg.png) no-repeat;
+	height: 600px;
+	margin: 0 auto;
+}
+.SideBarClose {
+    background: #000000;
+    font-family: Tahoma;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+
+    height: 1000px;
+    z-index: 3;
+    opacity:.8;
+    filter:alpha(opacity=80);
+    width:100%;
+    display: none;
+    cursor: pointer;
+}

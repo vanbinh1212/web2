@@ -1,0 +1,112 @@
+<?php
+	session_start();
+	
+	define("SNAPE_VN", true);
+	include_once(dirname(__FILE__)."/../#config.php");
+
+	include_once(dirname(__FILE__)."/../class/class.account.php");
+
+	include_once(dirname(__FILE__)."/../class/function.global.php");
+
+	include_once(dirname(__FILE__)."/../class/function.soap.php");
+	$userid = $_SESSION['ss_user_id'];
+	$codevip = "";
+	$serverid = trim($_POST['txtServer']);
+	$charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	for($i = 0; $i < 15; $i++)
+  {
+      $random_int = mt_rand();
+      $codevip .= $charset[$random_int % strlen($charset)];
+	}
+	if($serverid <= 0) {
+	$return['type'] = 154;
+	$return['content'] = 'Error verify params.';
+}
+	if($_POST)  {
+			$conn_sv = connectTank($serverid);
+		$serverInfo = loadserver($serverid);
+			$playerInfo = $account->getPlayerInfo($userInfo['Email']);
+		if($playerInfo['State'] == 1 || $userInfo['Money'] < 0 ) {
+							echo '<script>SnapeClass.openModal("Thông báo", "Tài khoản chưa thoát Game hoặc không đủ 10k Coin !", [])</script>';
+				break;
+	}else
+		
+	
+
+	
+			
+			// get userid							
+
+				account::Deleteketguild($userInfo['Email'], $serverid);
+				//account::logvip($userid, $userInfo['Email'], $userInfo['VIPLevel'], $codevip);
+				account::removeCoin($userid, 0);
+
+				
+				echo '<script>SnapeClass.openModal("Thông báo", "Bạn đã xóa két sắt thành công máy chủ <font color=black><b>'.$serverInfo['ServerName'].'</b></font> !", [])</script>';
+
+				
+			
+			
+			}
+		
+	
+	
+	
+	
+	
+?>
+<div style="padding:5px !important;">
+
+
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  
+
+
+	  
+    <div id="home" style="width:100% !important;" class="container tab-pane active"><br>
+   <center><div id="quanap" class="alert alert-warning" style="width:50%">
+
+			 <h2><p class="text-danger"> XÓA KÉT SẮT LÀ 0 COIN 1 LẦN ! </a> </p>
+</div></center></h2>
+
+ 
+	<center><div class="col-md-8">
+   <div id="quanap" class="alert alert-success" style="width:100%">
+
+<center><form id="frmReCharge" method="post">
+<label class="control-label" for="email_login">Loại:</label>
+
+			<select class="form-control"  name="txtVip">
+			<option value="1">Két Sắt</option>
+
+			
+			</select>
+			<div id="div_password" class="form-group">
+			<label class="control-label" for="email_login">Máy chủ nhận:</label>
+			<select id="txtServer" name="txtServer" class="form-control">
+				<option value="0">-- Chọn máy chủ --</option>
+				<?php
+				// load server list
+				$loadserver = loadallserver();
+				while($svInfo = sqlsrv_fetch_array($loadserver, SQLSRV_FETCH_ASSOC)) {
+					echo '<option value="'.$svInfo['ServerID'].'">'.$svInfo['ServerName'].'</option>';
+				}
+				?>
+			</select>
+		</div>
+	<center><input type="submit" class="btn btn-danger btn-block" value="Xóa Ngay !" />
+</form>
+</div>
+
+</div>
+	</div>
+     
+    </div>			
+
+  
+ <div style="height:140px">
+<h2><marquee style="border:blue 8px SOLID">Mọi Thắc Mắc Vui Lòng Liên Hệ Fanpage ♥</marquee></h2>
+    </div></center>

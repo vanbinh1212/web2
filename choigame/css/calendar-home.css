@@ -1,0 +1,310 @@
+/*calendar*/
+/*--------Top Cao Thu-----------*/
+.TopCalendar {
+	clear: both;
+	width: 106px;
+	margin: 0;
+	top: 00px;
+	z-index: 3;
+	position: relative;
+	left: 106px;
+}
+ul.ListMonth {
+	margin: 0;
+	overflow: hidden;
+	padding: 0 0 0 25px;
+}
+	ul.ListMonth li {
+		float: left;
+		list-style: none;
+		margin-right: 10px;
+		width: 110px;
+		height: 90px;
+		color: #b5b4b4;
+		
+	}
+		ul.ListMonth li a:link,
+		ul.ListMonth li a:visited {
+			display: block;
+		}
+		ul.ListMonth li a:hover,
+		ul.ListMonth li.Active a:link,
+		ul.ListMonth li.Active a:visited,
+		ul.ListMonth li.Active a:hover {
+			display: block;
+		}
+		
+		ul.ListMonth li p.Text {
+			line-height: 18px;
+			padding-top: 7px;
+		}
+		
+		.TopCalendar .jcarousel-skin-tango {
+			position: relative
+		}
+			.TopCalendar .jcarousel-skin-tango .jcarousel-container {
+			   
+				background: none;
+				border: none;
+				
+			}
+	
+			.TopCalendar .jcarousel-skin-tango .jcarousel-container-horizontal {
+				width: 84px;
+				padding: 0 0px 0 22px;
+			}
+			.TopCalendar .jcarousel-skin-tango .jcarousel-clip-horizontal {
+				width:  55px;
+				height: 40px;
+				padding: 0;
+				overflow: hidden;
+			}
+			.TopCalendar ul li.ThisMonth {
+				width: 59px;
+				height: 55px;
+				text-align: center;
+				
+			}
+
+			.TopCalendar ul li.ThisMonth-horizontal {
+				margin-right: 2px;
+			}
+
+			.TopCalendar ul li.ThisMonth-vertical {
+				margin-bottom: 10px;
+			}
+			.TopCalendar ul li.ThisMonth-placeholder {
+				background: #fff;
+				color: #000;
+			}
+
+/**
+ *  Horizontal Buttons
+ */
+		.Calendar .TopCalendar .NextMonth:link,.Calendar .TopCalendar .NextMonth:visited {
+			position: absolute;
+			top: 5px;
+			left: 78px;
+			width: 27px;
+			height: 34px;
+			cursor: pointer;
+			background: url(../images/calendar-arrow-right.png) no-repeat 0 0px;
+			display: block;
+			text-indent: -9999px;
+			
+		}
+
+		.Calendar .TopCalendar .NextMonth:hover {
+			background-position: 0 -34px;
+		}
+
+		.jcarousel-next-horizontal:active {
+			background-position: 0 0px;
+		}
+
+		.jcarousel-next-disabled-horizontal,
+		.jcarousel-next-disabled-horizontal:hover,
+		.jcarousel-next-disabled-horizontal:active {
+			
+		}
+
+		.Calendar .TopCalendar .PrevMonth:link,
+		.Calendar .TopCalendar .PrevMonth:visited {
+			position: absolute;
+			top: 5px;
+			left: 0;
+			width: 27px;
+			height: 34px;
+			cursor: pointer;
+			background: url(../images/calendar-arrow-left.png) no-repeat 0 0px;
+			display: block;
+			text-indent: -9999px;
+		}
+
+		.Calendar .TopCalendar .PrevMonth:hover {
+			background-position: 0 -34px;
+		}
+
+		.Calendar .TopCalendar .PrevMonth:active {
+			background-position: 0 0px;
+		}
+		.jcarousel-prev-disabled-horizontal,
+		.jcarousel-prev-disabled-horizontal:hover,
+		.jcarousel-prev-disabled-horizontal:active {
+			
+		}
+.TopCalendar ul li.ThisMonth p {
+	width: 50px;
+	height: 38px;
+	text-indent: -9999px;
+	display: block;
+	background: url(../images/number.png) no-repeat;
+}
+.TopCalendar ul li.ThisMonth p.Thang1 {
+	background-position: 12px -0px;
+}
+.TopCalendar ul li.ThisMonth p.Thang2 {
+	background-position: -51px 0px;
+}
+.TopCalendar ul li.ThisMonth p.Thang3 {
+	background-position: -110px 0;
+}
+.TopCalendar ul li.ThisMonth p.Thang4 {
+	background-position: -170px 3px;
+}
+.TopCalendar ul li.ThisMonth p.Thang5 {
+	background-position: 12px -54px;
+}
+.TopCalendar ul li.ThisMonth p.Thang6 {
+	background-position: -51px -54px;
+}
+.TopCalendar ul li.ThisMonth p.Thang7 {
+	background-position: -110px -54px;
+}
+.TopCalendar ul li.ThisMonth p.Thang8 {
+	background-position: -170px -54px;
+}
+.TopCalendar ul li.ThisMonth p.Thang9 {
+	background-position: 12px -112px;
+}
+.TopCalendar ul li.ThisMonth p.Thang10 {
+	background-position: -49px -112px;
+}
+.TopCalendar ul li.ThisMonth p.Thang11 {
+	background-position: -110px -112px;
+}
+.TopCalendar ul li.ThisMonth p.Thang12 {
+	background-position: -168px -112px;
+}
+/*-------------Calendar-----------------*/
+ul.CalEvent {
+	list-style: none;
+	width: 224px;
+	padding: 21px 0 0 1px;
+	position: relative;
+	z-index: 100;
+}
+ul.CalEvent li {
+	float: left;
+	width: 30px;
+	height: 28px;
+	margin: 1px 0px 1px 1px;
+	color: #000;
+	text-align: center;
+	padding: 0px;
+	position: relative;
+	z-index: 1;
+}
+ul.CalEvent li .Tip {
+	display: none;	
+	background: #fffdc3;
+	width: 208px;
+	position: absolute;
+	padding: 15px 0 0 0;
+	color: #5e452e;
+	z-index:5 !important;
+	padding: 2px;
+	border: #fdaf5b solid 1px;
+	
+}
+ul.CalEvent li .Tip p {
+	background: #ffe9af url(../images/bg-tip.gif) bottom center no-repeat;
+	width: 193px;
+	padding: 0px  0 13px 15px;
+	__padding: 10px 0 13px 15px;
+	font-weight: normal;
+	text-align: left;
+	font-size: 12px;
+	line-height: 15px;
+}
+ul.CalEvent li .Tip p a:link,ul.CalEvent li .Tip p a:visited {
+	background: none;
+	font-weight: bold;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+	float: left;
+	color: #5e452e;
+	width: 100%;
+}
+ul.CalEvent li .Tip p a.Old:link,ul.CalEvent li .Tip p a.Old:visited {
+	background: none;
+	font-weight: bold;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+	float: left;
+	color: #5e452e;
+	width: 100%;
+}
+ul.CalEvent li .Tip p a:hover {
+	text-decoration: none;
+	color: #cc3300;
+}
+ul.CalEvent li .Tip p a.Old:hover {
+	text-decoration: none;
+	color: #cc3300;
+}
+ul.CalEvent li .Tip p img {
+	padding: 5px 0;	
+}
+ul.CalEvent li.CalRed {
+	color: #db3b07;
+}
+
+ul.CalEvent li.CalRed a:link,
+ul.CalEvent li.CalRed a:hover,
+ul.CalEvent li.CalRed a:visited {
+	color: #fff;
+}
+
+ul.CalEvent li.CalBorLeft {
+	background: url(../images/calbor.gif) no-repeat -10px 0px;	
+}
+ul.CalEvent li.CalBorRight {
+	background: url(../images/calbor.gif) no-repeat -1px -62px;	
+}
+ul.CalEvent li.CalBorLeft a:link,ul.CalEvent li.CalBorLeft a:visited,ul.CalEvent li.CalBorLeft a:hover {
+	background: url(../images/calbor.gif) no-repeat -65px -1px;
+}
+ul.CalEvent li.CalBorRight a:link,ul.CalEvent li.CalBorRight a:visited,ul.CalEvent li.CalBorRight a:hover {
+	background: url(../images/calbor.gif) no-repeat -56px -63px;
+}
+ul.CalEvent li a:link,ul.CalEvent li a:visited,ul.CalEvent li a:hover {
+	background: url(../images/bg-date-act.png) no-repeat;
+	width: 30px;
+	height: 28px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+
+ul.CalEvent li span {
+	display: block;
+	padding: 4px 0 0 0;
+	width: auto;
+	height: auto;
+}
+.Calendar {
+	width: 100%;
+	height: 260px;
+	position: relative;
+	margin: 0px 0 0 0px;
+	background: url(../images/bg-lich.jpg) no-repeat;
+	padding-top: 33px;
+}
+.Month {
+	position: absolute;
+	width: 50px;
+	height: 38px;
+	background: url(../images/number.png) no-repeat left -80px;
+	right: 50px;
+	top: 5px;
+}
+.TitleEvent {
+	padding-top: 5px;
+
+}
+.SunColor, .SatColor { 
+	color:#cc3300;
+}

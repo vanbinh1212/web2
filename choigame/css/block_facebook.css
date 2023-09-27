@@ -1,0 +1,36 @@
+.BlockFacebook {
+	
+	width: 700px;
+	height: 625px;
+	
+	overflow:hidden;
+	
+	background: #fff;
+	
+	
+}
+
+.BlockFacebookWrapper {
+	display: block;
+	position:fixed;
+	right: 0;
+	top: 100px;
+	padding: 10px;
+	border-radius:  5px 0 0 0  ;
+	background: #3c5a98;
+	z-index: 1000;
+	
+}
+.TitleFacebook {
+	background: url("../images/title_chatbox.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+	position: absolute;
+	text-indent: -9999px;
+	display: block;
+	width: 37px;
+	height: 500px;
+	left: -37px;
+	bottom: 0;
+	z-index: 1000;
+	
+	
+}

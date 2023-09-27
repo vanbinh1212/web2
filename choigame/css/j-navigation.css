@@ -1,0 +1,267 @@
+/* MENU LEVEL 0 */
+
+.boxNav{
+	 width:950px;
+	 height:40px; 
+	position:relative;
+	z-index:90; 
+	top:0px;
+	 left:0px;
+	 line-height:19px;
+	
+	/*background:url(../images/bg-nav.png) no-repeat; */
+	} 
+ul#navHome {
+    width:930px;
+	height:40px;
+	z-index:4;
+	margin-left: 20px; 
+}
+    ul#navHome li {
+        float: left;
+        list-style-type:none;
+        position: relative;
+    }
+    ul#navHome li.Blank{
+		width:200px; 
+		height:35px; 
+		display:block;
+	}
+	
+        ul#navHome li a:link,
+        ul#navHome li a:visited {
+            display: block;
+            color: #661a00;
+			text-indent:-9999px;
+			font-weight:normal;
+        }
+		ul#navHome li a{ 
+			background:url(../images/nav-home.jpg) no-repeat; 
+			height:40px; 
+			display:block; 
+			text-indent:-9999px;
+		}
+		/*----------*/
+		
+		/*----------*/
+		ul#navHome li a.TinTuc{ 
+			background-position: -20px 0; 
+			width:155px;
+		}
+		ul#navHome li a.TinTuc:hover{
+			background-position: -20px -40px;
+		}
+		ul#navHome li.Active a.TinTuc,
+		ul#navHome li.Hilite a.TinTuc{
+			background-position:-20px -40px;
+		}
+		ul#navHome li.Off a.TinTuc{
+			cursor:default;
+			background-position:-20px -74px;
+		}
+		/*----------*/
+		ul#navHome li a.GioiThieu{ 
+			background-position: -175px 0; 
+			width: 150px;
+		}
+		ul#navHome li a.GioiThieu:hover{
+			background-position:-175px -40px;
+		}
+		ul#navHome li.Active a.GioiThieu,
+		ul#navHome li.Hilite a.GioiThieu{
+			background-position:-175px -40px;
+		}
+		ul#navHome li.Off a.GioiThieu{
+			cursor:default;
+			background-position:-175px -74px;
+		}
+		/*----------*/
+		ul#navHome li a.HuongDanNav{ 
+			background-position:-325px 0; 
+			width: 150px;
+			}
+		ul#navHome li a.HuongDanNav:hover{
+			background-position:-325px -40px;
+		}
+		ul#navHome li.Active a.HuongDanNav,
+		ul#navHome li.Hilite a.HuongDanNav{
+			background-position:-325px -40px;
+		}
+		ul#navHome li.Off a.HuongDanNav{
+			cursor:default;
+			background-position:-325px -74px;
+		}
+		
+		
+		/*----------*/
+		ul#navHome li a.HoTro{ 
+			background-position:-475px 0; 
+			width: 150px;
+		}
+		ul#navHome li a.HoTro:hover{
+			background-position:-475px -40px;
+			}
+		ul#navHome li.Active a.HoTro,
+		ul#navHome li.Hilite a.HoTro{
+			background-position:-475px -40px;
+		}
+		ul#navHome li.Off a.HoTro{
+			cursor:default;
+			background-position:-475px -74px;
+		}
+		
+		/*----------*/
+		ul#navHome li a.ThuVien{ 
+			background-position:-625px 0; 
+			width: 150px;
+		}
+		ul#navHome li a.ThuVien:hover{
+			background-position:-625px -40px;
+		}
+		ul#navHome li.Active a.ThuVien,
+		ul#navHome li.Hilite a.ThuVien{
+			background-position:-625px -40px;
+		}
+		ul#navHome li.Off a.ThuVien{
+			cursor:default;
+			background-position:-625px -74px;
+		}
+		/*----------*/
+		ul#navHome li a.DienDan{ 
+			background-position:-775px 0; 
+			width: 175px;
+		}
+		ul#navHome li a.DienDan:hover{
+			background-position:-775px -40px;
+		}
+		ul#navHome li.Active a.DienDan,
+		ul#navHome li.Hilite a.DienDan{
+			background-position:-775px -40px;
+		}
+		ul#navHome li.Off a.DienDan{
+			cursor:default;
+			background-position:-775px -74px;
+		}
+		
+		
+											
+        ul#navHome li.Active a:link,
+        ul#navHome li.Active a:visited,
+        ul#navHome li.Hilite a:link,
+        ul#navHome li.Hilite a:visited,
+
+        ul#navHome li a:hover {
+            text-decoration: none;
+            color: #fff;
+			
+        }
+        /* SUB-MENU LEVEL 1 */
+        ul#navHome li ul {
+            width: 188px;
+			position:absolute;            
+            top: 34px;
+            left: -20px;
+            display:none;
+			font-size:11px;
+			padding:6px 0 29px 0;
+			background:url(../images/submenu-bt.gif) 5px bottom no-repeat;
+        }
+        ul#navHome li ul.ToRight {
+            left: auto;
+            right:0;
+        }
+
+		    ul#navHome li ul li {
+				float:left;
+                color:#573700;
+                text-indent:0px;
+				margin-bottom:0px;
+				height:23px;
+            }
+			ul#navHome li.Active ul li.Top{
+				width:185px;
+				background:url(../images/submenu-top.gif) no-repeat;
+				height:12px;
+				margin:0;
+				padding:0;
+				display:block;
+				overflow:hidden
+			}
+			ul#navHome li ul li a{ height:23px;}
+			
+                ul#navHome li.Active ul li a:link,
+                ul#navHome li.Active ul li a:visited {
+					width:143px;
+					line-height:23px;
+					color:#573700;
+					text-indent:0;
+					padding:0px 0px 0px 42px;
+					background:url(../images/submenu.gif) 12px -27px no-repeat;
+					font-weight:bold;
+                }
+
+
+				ul#navHome li.Active ul li.Active a:link,
+				ul#navHome li.Active ul li.Active a:visited{
+					font-size:11px;
+					color:#ff6600;
+					background-position:12px 0px
+				}
+                ul#navHome li.Active ul li.Off a:link,
+				ul#navHome li.Active ul li.Off a:visited,
+				ul#navHome li.Active ul li.Off a:hover{
+                    color:#cabb90;
+					cursor:default;
+					background-position:12px -27px;
+                }
+
+                ul#navHome li.Active ul li a:hover {
+                    color:#ff6600;
+					background:url(../images/submenu.gif) 12px -27px no-repeat;
+                }
+                
+/*
+				
+				ul#navHome li.Active ul li.HasChild.Active.bottom a:link,
+				ul#navHome li.Active ul li.HasChild.Active.bottom a:visited{
+					background-position:0 0;
+				}
+				*/
+				ul#navHome li.Active ul li a.NoLine:link,
+				ul#navHome li.Active ul li a.NoLine:visited{
+					
+					background:url(../images/submenu-noline.gif) no-repeat 12px -27px;
+				}
+				ul#navHome li.Active ul li a.NoLine:hover {
+					color:#ff6600;
+					background:url(../images/submenu-noline.gif) no-repeat 12px 0;
+                }
+				ul#navHome li.Active ul li.Off a.NoLine:link,
+				ul#navHome li.Active ul li.Off a.NoLine:visited,
+				ul#navHome li.Active ul li.Off a.NoLine:hover{
+					
+					cursor:default;
+					background:url(../images/submenu-noline.gif) no-repeat 12px -25px;
+				}
+
+
+				
+    /* MODIFIED : set active o day, muon hightlight cai nao thi phai style = class Hilite */
+                ul#navHome li.Active ul li.Hilite a:link,
+				ul#navHome li.Active ul li.Hilite a:visited,
+				ul#navHome li.Active ul li.Hilite a:hover
+				{
+                    color:#ff6600;
+					background-position:12px 0px
+                }
+    /* end. MODIFIED */
+	
+				ul#navHome li.Active ul li.Hilite a.NoLine:link,
+				ul#navHome li.Active ul li.Hilite a.NoLine:visited{
+					font-size:12px;
+					color:#ff6600;
+					background:url(../images/submenu-noline.gif) no-repeat 12px -25px;
+					
+				}
+
+	

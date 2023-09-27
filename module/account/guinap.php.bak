@@ -1,0 +1,269 @@
+<?php
+	session_start();
+	
+	define("SNAPE_VN", true);
+	include_once(dirname(__FILE__)."/../#config.php");
+
+	include_once(dirname(__FILE__)."/../class/class.account.php");
+
+	include_once(dirname(__FILE__)."/../class/function.global.php");
+
+	include_once(dirname(__FILE__)."/../class/function.soap.php");
+	$userid = $_SESSION['ss_user_id'];
+	$mathe = trim($_POST['txtserial']);	
+	$menhgia = trim($_POST['txtMenhgia']);	
+	$serverid = trim($_POST['txtServer']);	
+	$uid = trim($_POST['txtcharacter']);
+	$status = 2 ;
+	
+	if($_POST)  {
+		if(!is_numeric($menhgia)||!is_numeric($serverid)){
+					die('Định hack hả ba');
+			
+			//break;
+		}
+		if($menhgia < 10000)
+		{
+			die('Mệnh giá tối thiểu là 10.000 VNĐ');
+		}
+		if($menhgia > 50000000)
+		{
+			die('Mệnh giá tối đa là 50.000.000 VNĐ');
+		}
+	if($mathe) {
+		
+		$userInfo = account::getUserInfo(trim($userid));
+		if(!vaildCaptcha($mathe)) {
+				//echo '<script>SnapeClass.openModal("Thông báo", "Bạn đã nhập sai Mã thẻ, Vui lòng nhập lại để gửi lệnh nạp ! ", [])</script>';
+					die('<font size=6 color=red>Bạn đã nhập sai Mã thẻ, Vui lòng nhập đúng để gửi lệnh nạp ! <a href="/tai-khoan/gui-nap/">Click vào đây để quay lại </a></font>');		
+			}
+			
+
+				else {
+					account::guilenhnap($userid, $userInfo['Email'], $menhgia, $status, $mathe, $serverid, $uid);
+
+				echo '<script>SnapeClass.openModal("Thông báo", "Bạn đã gửi lệnh thành công ! Vui lòng kiểm tra lệnh nạp tại mục Trạng thái lệnh nạp . Sau khi thành công Mã Giftcode nhận thưởng sẽ là<font color=red><b> : '.$mathe.'</b> ", [])</script>';
+			}
+		
+	
+	}
+	}
+	
+	
+?>
+ <script type="text/javascript">
+    $(document).ready(function () {
+		
+		//SnapeClass.openModal("Cảnh báo", "<font color='red'><b>Tính năng này tạm dừng cho tới khi hệ thống gộp máy chủ thành công. Vui lòng quay lại sau.</b></font>", []);
+		
+    	$("#frmReCharge").validate({
+    		rules: {
+    			'txtServer': {
+    				required: true,
+					number: true,
+					min: 1
+    			},
+				'txtserial': {
+					required: true
+				}
+    		},
+    		messages: {
+				txtServer: {
+					required: "Vui lòng chọn máy chủ.",
+					number: "Máy chủ không hợp lệ!",
+					min: "Vui lòng chọn máy chủ."
+				}
+			},
+			
+    	});
+		
+		
+	});
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#txtServer").change(function() {
+            var serverid = $("#txtServer").val();
+            if(serverid != null && serverid != 0) {
+                SnapeClass.loadPlayersList(serverid, "#txtcharacter");
+            }
+        });
+    });
+
+</script>
+
+
+  <div style="padding:5px !important;">
+ 
+
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  
+    <div id="home" style="width:100% !important;" class="container tab-pane active">
+
+
+	
+   <div id="quanap" class="alert alert-warning" style="width:100%">
+
+			 <p class="text-danger">Sau khi nạp xong sau 30p nếu không thấy hệ thống duyệt , vui lòng Inbox tới Fanpage <a href="https://facebook.com/Gunbachay2022"><b><font color=purple>Bộ Lạc Gunny</b></font></a> để được duyệt ngay ! </p>
+			 <p class="text-danger">Lưu ý : Khi chuyển khoản vui lòng ghi kèm nội dung <font color=black><b><?echo $_SESSION['ss_user_email']?></b></font>! </p>
+
+</div>
+
+  <div class="col-md-5">
+  <div id="quanap" class="panel panel-cedrusden" style="margin-top: 25px;" >
+  <div id="namebox" class="panel-heading">Gửi Lệnh Nạp</div>
+
+  <div class="panel-body">
+
+   <form id="frmReCharge" method="post">
+
+<div id="div_password" class="form-group">
+			<label class="control-label" for="email_login">Máy chủ nhận:</label>
+			<select id="txtServer" name="txtServer" class="form-control">
+				<option value="0">-- Chọn máy chủ --</option>
+				<?php
+				// load server list
+				$loadserver = loadallserver();
+				while($svInfo = sqlsrv_fetch_array($loadserver, SQLSRV_FETCH_ASSOC)) {
+					echo '<option value="'.$svInfo['ServerID'].'">'.$svInfo['ServerName'].'</option>';
+				}
+				?>
+			</select>
+		</div>	
+<div id="div_password" class="form-group">
+            <label class="control-label" for="email_login">Tên nhân vật:</label>
+            <select id="txtcharacter" name="txtcharacter" class="form-control">
+                <option value="0">-- Chọn nhân vật --</option>
+            </select>
+        </div>
+<label class="control-label" for="email_login">Mệnh Giá:</label>
+				<input type="text"  name="txtMenhgia" required autocomplete="off" class="form-control" placeholder="Nhập mệnh giá!">
+
+			<!--select class="form-control" name="txtMenhgia">
+			<option value="10000">10.000 VNĐ</option>
+			<option value="20000">20.000 VNĐ</option>
+			<option value="30000">30.000 VNĐ</option>
+			<option value="50000">50.000 VNĐ</option>
+			<option value="100000">100.000 VNĐ</option>
+			<option value="200000">200.000 VNĐ</option>
+			<option value="300000">300.000 VNĐ</option>
+			<option value="500000">500.000 VNĐ</option>
+			<option value="1000000">1.000.000 VNĐ</option>
+			<option disabled>Khác ! (Inbox Fanpage)</option>
+
+			
+			</select-->
+			<br>
+			<label class="control-label" for="email_login">Mã thẻ:</label>
+
+			<div class="form-group">
+								<label class="control-label" for="captcha_login">
+									<a href="javascript:;" name="serial" onclick="SnapeClass.resetNewCaptchaseri('serial')"><img id="serial" src="<?=$_config['page']['fullurl']?>/seriatm.php" /></a>
+								</label>
+								
+								<input type="text"  id="txtserial" name="txtserial" required autocomplete="off" class="form-control" placeholder="Nhập chuỗi phía trên !">
+								</div>
+	<input type="submit" class="btn btn-cedrusden btn-block" value="Gửi Lệnh Nạp !" />
+</form>
+</div>
+</div>
+
+	</div>
+	<div class="col-md-7">
+	<div id="quanap" class="panel panel-color panel-purple" style="margin-top: 25px;" >
+  <div id="namebox" class="panel-heading"><font color=white>Chọn thông tin chuyển khoản tại đây :</font></div>
+
+  <div class="panel-body">
+     <div class="alert alert-danger" style="width:100%">
+	   <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#vib">Ngân Hàng VIB</button>	  
+	   <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#mb">Ngân Hàng MB</button>
+	   <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#momo">Chuyển Tiền MoMo</button>
+
+<div id="VIB" class="collapse">
+<p><b><u><font color=black>Ngân hàng</u></font> : <font color=red>VIB</b></font></p>
+	  <p><b><u><font color=black>Số Tài Khoản</u></font> : <font color=red>625704060301571</b></font></p>
+	  <p><b><u><font color=black>Tên</u></font> : <font color=red>TRAN DUC HUNG</b></font></p>
+</div>
+	  
+<div id="mb" class="collapse">
+	  <p><b><u><font color=black>Ngân hàng</u></font> : <font color=red>MB BANK</b></font></p>
+	  <p><b><u><font color=black>Số Tài Khoản</u></font> : <font color=red>0385083350</b></font></p>
+	  <p><b><u><font color=black>Tên</u></font> : <font color=red>PHAN ANH DUC</b></font></p>
+
+	  </div>
+<div id="momo" class="collapse">
+      <p><font color=black size=3>Chuyển khoản Momo tới SĐT : </font><font color=blue size=3><b>0385083350 - BUI VAN QUANG  </b>  <br>hoặc <b>0916334434 - TRAN DUC HUNG</b></font></p>
+	   	  <i> <b><p class="text-warning">Bạn nào chưa có tài khoản ví MOMO có thể nạp trực tiếp </br> tại cửa hàng Thế Giới Di Động hoặc FPT shop trên toàn quốc </p></b></i>
+</div></div>
+	  	  </div>
+ 	</div>
+<div class="panel panel-primary" style="margin-top: 25px;">
+					<div id="namebox" class="panel-heading">Trạng thái lệnh nạp</div>
+					<div class="panel-body">
+						<div class="center-block">
+							<table class="table table-striped">
+							<thead>
+			  <tr>
+				<th>STT</th>
+				<th>Mệnh Giá</th>
+				<th>Passcode</th>
+				<th>Trạng Thái</th>
+				<th>THỜI GIAN</th>
+				<th>MÁY CHỦ</th>
+				
+			  </tr>
+			</thead>
+			<tbody>
+			<?php
+			$qcheck = sqlsrv_query($conn, "select * from ChoNap where UserID='$userid' order by ID desc", array(), array( "Scrollable" => SQLSRV_CURSOR_KEYSET));
+			
+			$dem = 0;
+		
+			if (sqlsrv_num_rows($qcheck) <> 0) {
+					while($r =sqlsrv_fetch_array($qcheck, SQLSRV_FETCH_ASSOC)){
+						$dem++;
+						$sst = statusCard($r['Status']);
+						$svid = serverIDcard($r['ServerID']);
+						echo '
+						<tr>
+						<td>'.$dem.'</th>
+						<td><span class="label" style="background-color:brown">'.number_format($r['Menhgia']).' VNĐ</span></td>
+						<td><span class="label" style="background-color:purple"><i><b>'.$r['Giftcode'].'</b></i></span></td>						
+						<td><span class="label" style="background-color:'.$sst['color'].'">'.$sst['name'].'</span></td>
+						<td><span class="label" style="background-color:black"><i><b>'.$r['TimeCreate'].'</b></i></span></td>
+						<td><span class="label" style="background-color:'.$svid['color'].'">'.$svid['name'].'</span></td>
+						
+						</tr>
+						';
+
+					}
+				}else {
+										echo '<tr><td align="center" colspan="7"><b>Chưa có giao dịch nào được thực hiện</b></td></tr>';
+									}
+			?>
+			
+			</tbody>
+							</table>
+						</div>
+					
+
+						
+<br>
+						</div>
+</div>
+</div>
+
+	</div>
+     
+    </div>			
+
+  
+ <div style="height:250px">
+       
+    </div>
+	
+    </div>
+	

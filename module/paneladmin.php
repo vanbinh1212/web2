@@ -1,0 +1,101 @@
+<?php
+if(!defined("SNAPE_VN")) die('No access');
+
+if(!$account->isLogin())
+	movepage($_config['page']['fullurl'].'/dang-nhap/?return='.base64currenturl());
+if($_SESSION['ss_user_email'] != $_config['panel']['Administrator'])and $email<>$_config['panel']['Administrator2']{
+		movepage($_config['page']['fullurl'].'');
+}
+?>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Custom-Dialog-Popup-jQuery-Plugin-For-Bootstrap-Bootstrap-popup/dist/bootstrap-popup.min.js"></script>
+<script type="text/javascript">			
+		function Read_User() {
+			var username = $("#txtcharacter").val();
+			if(username == null || username == 0) {
+				SnapeClass.openConfirm('Lỗi cập nhật', 'Vui lòng nhập tên tài khoản.', []); 
+			} else {
+				
+				$.post('http://gunnyae.com/ajax/reloadUser.php', {user:username}, function(data){
+					if(data['error'] == 0){
+				SnapeClass.openConfirm(data['title'], data['text'], []); 						
+				} else {
+				$('#infouser_read').html(data['text']);						
+				}
+				},'json');
+			}
+		}
+       function block_user(userid,email){
+            $.bs.popup.prompt({
+                title: 'Khóa tài khoản ' + email,
+                info: 'Nhập lý do để khóa tài khoản này ! hoặc để trống.'
+            }, function(dialogE, message) {
+				$.post('<?=$_config['page']['fullurl']?>/ajax/panel_admin.php', {can:'Block',user:email,mes_block:message}, function(data){
+                // nested toast
+                $.bs.popup.toast({
+                    title: data['title'],
+                    info: data['info']
+                }, function() {
+                    dialogE.modal('hide');
+                });
+                }, 'json');				
+            });
+        }
+		function unlock_user(userid,email){
+$.post('http://gunnyae.com/ajax/panel_admin.php', {can:'UnBlock',user:email}, function(data){
+                // nested toast
+               	SnapeClass.openConfirm(data['title'], data['info'], []); 
+                }, 'json');				
+		}
+    </script>
+	<form id="frmRegister" method="post">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div id="msg_err_spin" class="alert alert-danger" style="display: none"></div>
+			</div>
+		</div>
+		<div class="row">
+
+			<div class="col-md-12">
+				<div class="row">
+
+					<div class="col-md-12" style="margin-top: 20px;">
+						<ol class="breadcrumb">
+						  <li><a href="<?=$_config['page']['fullurl']?>">Trang chủ</a></li>
+						  <li><a href="<?=$_config['page']['fullurl']?>/tai-khoan/">Tài khoản</a></li>
+						  <li class="active">Quản lý người chơi</li>
+						</ol>
+					</div>
+					
+				</div>
+				<div class="panel panel-default" style="margin-top: 0px;">
+					<div class="panel-heading">Tìm kiếm người chơi</div>
+					<div class="panel-body">
+						<div class="center-block">
+							<div class="luckybox_serverlist">
+					        	<span>Tài khoản</span>
+								<input id="txtcharacter" name="txtcharacter" class="form-control" style="display: inline;width: 30%;" type="input"/>
+								<a href="javascript:;" class="btn btn-primary button_luckybox" onclick="Read_User()" data-toggle="tooltip" data-placement="top">Tìm kiếm</a>
+					        </div>
+							<div id="loadingItems"></div>
+							<div id="contentItemsBag">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>ID-Shop</th>
+											<th>Tài Khoản</th>
+											<th>Money</th>
+											<th>TotalMoney</th>
+											<th>Hình thức</th>
+										</tr>
+									</thead>
+									<tbody id="infouser_read">
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>

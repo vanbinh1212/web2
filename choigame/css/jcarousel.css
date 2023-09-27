@@ -1,0 +1,139 @@
+/**
+ * This <div> element is wrapped by jCarousel around the list
+ * and has the classname "jcarousel-container".
+ */
+.jcarousel-container {
+    position: relative;
+}
+
+.jcarousel-clip {
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.jcarousel-list {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+	height: 21px;
+}
+
+/**
+ * The buttons are added dynamically by jCarousel before
+ * the <ul> list (inside the <div> described above) and
+ * have the classnames "jcarousel-next" and "jcarousel-prev".
+ */
+.jcarousel-next {
+    z-index: 3;
+    display: none;
+}
+
+.jcarousel-prev {
+    z-index: 3;
+    display: none;
+}
+
+/*user theme*/
+    /**
+     * This <div> element is wrapped by jCarousel around the list
+     * and has the classname "jcarousel-container".
+     */
+    .jcarousel-container {
+        position: relative;
+		width: 352px;
+		height: 30px;	
+		overflow: hidden;
+		padding: 0 25px;
+    }
+
+    .jcarousel-clip {
+        z-index: 2;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+    	width: 352px;
+    }
+
+    .jcarousel-list {
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+	
+    .jcarousel-list li,
+    .jcarousel-item {
+        float: left;
+        list-style: none;
+        height: 20px;
+		width: 70px;
+    }
+    .jcarousel-clip .jcarousel-list li.Hover,
+    .jcarousel-clip .jcarousel-list li.Active {
+		
+    }
+	
+	.jcarousel-list li a:link,
+	.jcarousel-list li a:visited {
+		width: 70px;
+		height: 20px;
+		text-align: center;
+		color: #91a1a9;
+		display: block;
+		line-height: 18px;
+	}
+	.jcarousel-list li a:hover,
+	.jcarousel-list li.Active a:link,
+	.jcarousel-list li.Active a:visited,
+	.jcarousel-list li.Active a:hover {
+		color: #a3bdca;
+		background-position: 0 -18px;
+	}
+
+    .jcarousel-next,
+    .jcarousel-prev {
+        z-index: 2;
+        display: none;
+        position: absolute;
+        width: 25px;
+        height: 30px;       
+        cursor: pointer;
+    }
+
+    .jcarousel-next {
+        right: 0px;
+        background: url(../images/next-btn.gif) no-repeat left top;
+    }
+	.jcarousel-next:hover {
+		background-position: 0 -30px;
+	}
+    .jcarousel-prev {
+        left: 0;
+        background: url(../images/prev-btn.gif) no-repeat left top;
+    }
+	.jcarousel-prev:hover {
+		background-position: 0 -30px;
+	}
+
+    .jcarousel-next-disabled,
+    .jcarousel-prev-disabled,
+	.jcarousel-next-disabled:hover,
+	.jcarousel-prev-disabled:hover{ /* disabled */
+       /* opacity: 0.2;
+		-moz-opacity: 0.2;
+        filter: alpha(opacity=20);*/
+		background-position: 0 -60px;
+		cursor: default;
+    }
+/* END. user theme */

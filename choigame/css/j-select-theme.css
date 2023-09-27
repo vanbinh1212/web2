@@ -1,0 +1,118 @@
+/* jLightBox (using jQuery library).
+*--------------------------------------------*
+*  @author : ukhome ( ukhome@gmail.com | ntkhoa_friends@yahoo.com )
+*--------------------------------------------*
+*  @released : 24-Mar-2009 : version 1.0
+*--------------------------------------------*
+*  @revision history : ( latest version : 1.0 )
+*--------------------------------------------*
+*      + 24-Mar-2009 : version 1.0
+*          - released
+*--------------------------------------------*
+*/
+
+/* Add Theme to Container Div: classname = Your theme classname */
+div.Theme_GP_Wrapper {/*Wrap all*/
+
+    width: 200px;
+    height: 30px;
+	margin: 5px 0 0 10px; 
+    padding: 0;
+    background: url(../images/bg-select.png) left top no-repeat;
+}
+    div.Theme_GP_List { /*Wrap UL*/
+		background: url(../images/bg-top-select.gif) center top no-repeat;
+		margin: 0;
+		padding: 3px 0 0 0;
+        width: 200px;
+		border-top: none;
+    }
+        div.Theme_GP_Wrapper p {
+            width: 190px;
+            color: #bb3000;
+            font-size: 12px;
+            padding: 0px 0px 0px 10px;
+            cursor: pointer;
+            overflow: hidden;
+            height: 30px;
+			line-height: 26px;
+			font-weight: bold;
+        }
+
+    /* UL */
+    div.Theme_GP_List ul.Theme_GP {
+		background: url(../images/bg-bot-select.gif) center bottom no-repeat;
+        width: 200px;
+        padding: 0 0 3px 0;
+        margin: 0;
+        overflow: hidden;
+    }
+        div.Theme_GP_List ul.Theme_GP li {
+            padding: 0;
+            margin: 0 auto;
+            overflow: hidden;
+			background: url(../images/bg-li-select.gif) no-repeat;
+			width: 230px;
+			height: 26px;
+			padding: 4px 0 0 10px;
+        }
+        div.Theme_GP_List ul.Theme_GP li.First {
+            border-top: none !important;
+        }
+		div.Theme_GP_List ul.Theme_GP li:hover {
+			background: url(../images/bg-li-select-hover.gif) no-repeat;
+		}
+        /*use for optgroup name*/
+        div.Theme_GP_List ul.Theme_GP li span {
+            font-size: 11px;
+            font-weight: bolder;
+            font-style: italic;
+            display: block;
+            padding: 4px 0;
+            cursor: default;
+            padding: 3px 0 3px 4px;
+        }
+        /*Normal*/
+            div.Theme_GP_List ul.Theme_GP li a:link,
+            div.Theme_GP_List ul.Theme_GP li a:visited {
+                display: block;
+                font-size: 12px;
+				line-height: 18px;
+				color: #5d4b03;
+                padding: 3px 10px 4px 10px;
+                overflow: hidden;
+                text-decoration: none;
+				font-weight: bold;
+             }
+             /*Active*/
+            div.Theme_GP_List ul.Theme_GP li.Active a:link,
+            div.Theme_GP_List ul.Theme_GP li.Active a:visited {
+                text-decoration: none;
+                color: #5d4b03;
+            }
+            /*Hover*/
+            div.Theme_GP_List ul.Theme_GP li.Hover a:link,
+            div.Theme_GP_List ul.Theme_GP li.Hover a:visited {
+                text-decoration: none;
+                /*color: #37b8d3;
+                background: #82cdfc;*/
+            }
+
+            /*level 2 - in case has optgroup*/
+            div.Theme_GP_List ul.Theme_GP li ul {
+                border: none;
+            }
+                div.Theme_GP_List ul.Theme_GP li ul li {
+                    font-size: 1em;
+                }
+                    div.Theme_GP_List ul.Theme_GP li ul li a:link,
+                    div.Theme_GP_List ul.Theme_GP li ul li a:visited {
+                        padding: 5px 0px 5px 5px;
+                        font-weight: normal;
+                    }
+
+/* Theme modified */
+div.Theme_GP_Modified_Wrapper {/*Wrap all*/
+    margin: 0;
+}
+

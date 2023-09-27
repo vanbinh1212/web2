@@ -1,0 +1,436 @@
+.BlockNews {
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	height:240px;
+	background:url(../images/home-bg-tin-tuc.jpg) no-repeat;
+}
+
+.BlockNews ul.Tab {
+	height:35px;
+	width:279px;
+	overflow:hidden;
+	background:url(../images/tab-news1.png) 0 0px no-repeat;
+	
+	padding-left:172px;
+}
+.BlockNews a.News {
+	position:absolute;
+	top:4px;
+	left:45px;
+	width:60px;
+	height:25px;
+	display:block;
+	text-indent:-9999px;
+}
+
+
+
+.BlockNews ul.Tab li {
+	float:left;
+	font-size:12px;
+	line-height:19px;
+	font-weight:bold;
+	margin:2px 0px 4px 0px;
+	
+}
+
+
+
+.BlockNews ul.Tab li a {
+	display:block;
+	padding:0 0 0 12px;
+	color:#ceab73;
+	text-decoration:none;
+	overflow: hidden;
+}
+.BlockNews ul.Tab li a span {
+	display:block;
+	padding:4px 10px 5px 0px;	
+	color:#000;
+}
+.BlockNews ul.SocialNav li a span {
+	display:block;
+	padding:6px 25px 5px 0px;
+	background:url(../images/tab-news-unactive-right.gif) no-repeat top right;
+	color:#ceab73;
+}
+.BlockNews ul.SocialNav li a span img  {	
+	padding:2px 5px 0px 0px;
+	float:left;
+	
+}
+.BlockNews ul.Tab li a:hover {
+	background-position:bottom left;
+	color:#b33401;
+	text-decoration:none;
+}
+.BlockNews ul.Tab li a:hover span {
+	background-position:bottom right;
+	color:#b33401;
+	text-decoration:none;
+	background:url(../images/tab-news-active-right.gif) no-repeat top right;
+}
+.BlockNews ul.Tab li.ui-state-active a, .BlockNews ul.Tab li a:hover {
+	background:url(../images/tab-news-active-left.gif) 1px 0px no-repeat;
+	color:#b33401;
+	cursor:pointer;
+	padding:0 0 0 12px;
+}
+.BlockNews ul.Tab li.ui-state-active a span, .BlockNews ul.Tab li a:hover span {
+	background:url(../images/tab-news-active-right.gif) no-repeat top right;
+	color:#b33401;
+	cursor:pointer;
+}
+/**/
+.BlockNews ul.Shop li a {
+	display:block;
+	padding:0 0 0 12px;
+	
+	color:#ceab73;
+	text-decoration:none;
+}
+.BlockNews ul.Shop li a span {
+	display:block;
+	padding:6px 5px 5px 0px;
+	
+	color:#000;
+}
+.BlockNews ul.Shop  li a span {
+	display:block;
+	padding:6px 9px 5px 0px;
+	
+	color:#684202;
+}
+
+
+.BlockNews ul.Shop  li a:hover {
+	background-position:bottom left;
+	color:#b23600;
+	text-decoration:none;
+}
+.BlockNews ul.Shop  li a:hover span {
+	background-position:bottom right;
+	color:#b23600;
+	text-decoration:none;
+	background:url(../images/tab-shop-right-active.gif) no-repeat top right;
+}
+.BlockNews ul.Shop  li.ui-state-active a, .BlockNews ul.Shop  li a:hover {
+	background:url(../images/tab-shop-left-active.gif) 1px 0px no-repeat;
+	color:#b23600;
+	cursor:pointer;
+	padding:0 0 0 12px;
+}
+.BlockNews ul.Shop li.ui-state-active a span, .BlockNews ul.Shop  li a:hover span {
+	background:url(../images/tab-shop-right-active.gif) no-repeat top right;
+	color:#b23600;
+	cursor:pointer;
+}
+/**/
+.BlockNews ul.ListNews {
+	width:440px;
+	margin-left:10px;
+	overflow:hidden;
+}
+#boxTab_1 ul.ListNews, #boxTab_3 ul.ListNews {
+	padding:0;
+}
+#boxTab_2 ul.ListImages {
+	padding:10px 0 0px;
+}
+.BlockNews ul.ListNews li {
+	width:450px;
+	float:left;
+	overflow:hidden;
+	position:relative;
+}
+.BlockNews ul.ListNews li a:link, .BlockNews ul.ListNews li a:visited {
+	display:block;
+	overflow:hidden;
+	background:url(../images/icon01.png) 0 9px no-repeat;
+	padding:2px 3px 2px 18px;
+	color:#000;
+	height:18px;
+}
+
+.BlockNews ul.ListNews li a.spamlink:link, .BlockNews ul.ListNews li a.spamlink:visited, .BlockNews ul.ListNews li a.spamlink:hover {
+	display:block;
+	
+	padding:2px 3px 2px 18px;
+	color:#573700;
+	height:19px;
+	width:63px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.BlockNews ul.ListNews li a:hover {
+	color:#990000;
+	text-decoration:none;
+}
+.BlockNews ul.ListNews li a.Last:link, .BlockNews ul.ListNews li a.Last:visited {
+	border-bottom:none;
+}
+.BlockNews ul.ListNews li a.New:link, .BlockNews ul.ListNews li a.New:visited {
+	color:#b23600;
+	font-weight:bold;
+}
+.BlockNews ul.ListNews li a.New:hover {
+	color:#990000;
+}
+.BlockNews ul.ListNews li a.Hot:link, .BlockNews ul.ListNews li a.Hot:visited, .BlockNews ul.ListNews li a.Hot:hover {
+	font-weight:bold;
+}
+.BlockNews ul.ListNews li .DetailNews {
+	width:410px;
+	height:62px;
+	overflow:hidden;
+	margin-left:2px;
+	padding-top:1px;
+	color:#573700;
+}
+.BlockNews ul.ListNews li .DetailNews .Images {
+	float:left;
+	width:114px;
+	height:62px;
+	overflow:hidden
+}
+.BlockNews ul.ListNews li .DetailNews .Images a {
+	width:100px;
+	height:58px;
+	display:block;
+	background:none;
+	padding:1px;
+	border:1px solid #a38f6a;
+}
+.BlockNews ul.ListNews li .DetailNews .Images a:hover {
+	border:1px solid #10100d;
+}
+.BlockNews ul.ListNews li .DetailNews .Images a.spamlink:link, .BlockNews ul.ListNews li .DetailNews .Images a.spamlink:visited, .BlockNews ul.ListNews li .DetailNews .Images a.spamlink:hover {
+	border:none;
+}
+.BlockNews ul.ListNews li .DetailNews p {
+	text-align:justify;
+	padding-bottom:10px;
+	border-bottom:none;
+}
+.Date {
+	padding-top:1px;
+	padding-right:14px;
+	font-size:12px;
+	font-weight:normal;
+	float:right;
+	color:#000;
+}
+/*------------Su kien---------*/
+.BlockEvent {
+	width:450px;
+	margin:0px 0 0px 0px;
+	
+	overflow:hidden;
+	
+}
+
+.BlockEvent.In-game_1 {
+	
+	
+	
+}
+.BlockEvent .LinkLoaiSuKien {
+	width: 138px;
+	height: 90px;
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	
+
+}
+.BlockEvent img {
+	display:block;
+	border:#dbae6a solid 3px;
+	float: right;
+}
+.BlockEvent a.ImagesEvent {
+	float:left;
+	
+	padding:1px;
+}
+.BlockEvent a.ImagesEvent:hover {
+	
+}
+ul#eventImg {
+	float: left;
+	padding:3px 5px 0 0px;
+	overflow:hidden
+}
+ul#eventImg li {
+	display: none;
+}
+
+ul#eventImg2 {
+	float: left;
+	/*padding:10px 0 0 5px;*/
+	padding:10px 5px 0 0px;
+	overflow:hidden
+}
+ul#eventImg2 li {
+	display: none;
+}
+.BlockEvent ul.ListEvent {
+	float:right;
+	width:295px;
+	height: 90px;
+	margin-left:0px;
+	overflow:hidden;
+	padding-top:5px;
+}
+
+#suKien2{
+	float:right;
+	width:295px;
+	height: 135px;
+	margin-left:0px;
+	overflow:hidden;
+	padding-top:7px;
+}
+
+.BlockEvent ul.ListEvent li {
+	width:285px;
+	float:left;
+	overflow:hidden;
+	font-size:12px;
+	position: relative;
+}
+.BlockEvent ul.ListEvent li .Date {
+	padding: 0;
+}
+.BlockEvent ul.ListEvent li a.TitleEvent:link, 
+.BlockEvent ul.ListEvent li a.TitleEvent:visited {
+	display:block;
+	padding:3px 0px 2px 18px;
+	color:#573700;
+	line-height:22px;
+	background:url(../images/icon01.png) 0 9px no-repeat;
+	border-bottom:dotted 1px #c8b18b;
+}
+.BlockEvent ul.ListEvent li a.TitleEvent:hover {
+	color:#990000;
+	text-decoration:none;
+}
+.BlockEvent ul.ListEvent li.Last a.TitleEvent:link, 
+.BlockEvent ul.ListEvent li.Last a.TitleEvent:visited {
+	border-bottom:none
+}
+.BlockEvent ul.ListEvent li.Last {
+	border-bottom:none
+}
+.BlockEvent ul.ListEvent li a.New:link, .BlockEvent ul.ListEvent li a.New:visited {
+	font-weight: bold;
+	
+}
+.BlockEvent ul.ListEvent li a.New:hover {
+	
+}
+.BlockEvent ul.ListEvent li a.BtOpen:link, .BlockEvent ul.ListEvent li a.BtOpen:visited, .BlockEvent ul.ListEvent li a.BtOpen:hover {
+	position:absolute;
+	top:9px;
+	right:5px;
+	z-index:5;
+	width:15px;
+	margin:0;
+	padding:0;
+	height:15px;
+	text-indent:-9999px;
+}
+.BlockEvent ul.ListEvent li div.WrapperDetailNews {
+	margin:0;
+	overflow:hidden;
+	padding:0;
+	width:100%;
+}
+.BlockEvent ul.ListEvent li ul.DetailNews {
+	width:256px;
+	margin:0px;
+	padding:0 0 10px 10px;
+	overflow:hidden;
+}
+.BlockEvent ul.ListEvent li ul.DetailNews li {
+	list-style:none;
+	padding:2px 10px 2px 8px;
+	line-height:15px;
+	font-size:12px;
+	border-bottom:none;
+	width:248px;
+}
+.BlockEvent ul.ListEvent li ul.DetailNews li a:link, .BlockEvent ul.ListEvent li ul.DetailNews li a:visited {
+	color:#573700;
+	text-decoration:none;
+	padding:0;
+	font-weight:normal;
+	background:none;
+	text-transform:none;
+	height:17px;
+}
+.BlockEvent ul.ListEvent li ul.DetailNews li a:hover {
+	color:#990000;
+	text-decoration:none;
+}
+.BlockEvent p.EventShorContent {
+	width:245px;
+	margin:0px;
+	padding:0 0 10px 18px;
+	overflow:hidden;
+	}
+.Color01 {
+	color:#d2a537;
+}
+
+a.ViewMore {
+	background:url(../images/icon-xem-them.png) 0px 0 no-repeat;
+	width:16px;
+	height:17px;
+	display:block;
+	text-indent:-9999px;
+	position:absolute;
+	z-index:2;
+	top:8px;
+	right:10px;
+	overflow:hidden;
+}
+a.ViewMore:hover {
+	background:url(../images/icon-xem-them.png) 0px -17px no-repeat;
+
+}
+h2.TitleEvent {
+	overflow:hidden;
+	display:block;
+	color:#f7c61a;
+	font-size:12px;
+	font-weight:bold;
+	line-height:19px;
+	text-indent:-999px;
+	padding:14px 0 16px 40px;
+	margin-bottom: 0;
+}
+a.ViewMoreEvent {
+	background:url(../images/none.gif) 0px 0 ;
+	width:160px;
+	height:30px;
+	display:block;
+	text-indent:-9999px;
+	position:absolute;
+	z-index:2;
+	left:46px;
+	overflow:hidden;
+	top:9px;
+}
+.BlockSuKien {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background:url(../images/tab-sukien.jpg) 0px 0 no-repeat ;
+
+}
+.BlockSuKien a.ViewMore{ 
+	top: 16px;
+}

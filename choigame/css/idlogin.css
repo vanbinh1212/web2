@@ -1,0 +1,411 @@
+#wrapper {
+	
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
+	
+}
+#container {
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+.BgLogin {
+	width: 405px;
+	height: 520px;
+	overflow: hidden;
+	font-size: 12px;
+	background:  none;
+	color: #000000;
+	background: url(../images/bg-login.png) no-repeat center top;
+	position: relative;
+	margin: 0 auto;
+	padding: 300px 105px 0 80px
+}
+.BgIDLogin {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: auto !important;
+}
+.BgLogin a:link,
+.BgLogin a:visited {
+	color: #000;
+	text-decoration: none;
+}
+.BgLogin a:hover {
+	
+	text-decoration: underline;
+}
+.frm_dangnhap {
+	margin: 0;
+	overflow: hidden;
+	width: 255px;
+	z-index: 31;
+	float: left;
+}
+
+.frm_dangnhap input.txt_box {
+	background: none;
+	border: none;
+	height: 29px;
+	line-height: 29px;
+	margin: 0 0 7px !important;
+	padding: 5px 0 5px 5px;
+	width: 250px;
+	float: left;
+	color: #5e452e;
+	font-size: 18px;
+}
+.frm_button {
+	margin: 0;
+	overflow: hidden;
+	width: 130px;
+	float: right;
+}
+input.txt_box {
+	border: 1px solid #ccc;
+	background: #FFF;
+	height: 15px;
+	line-height: 18px;
+	margin: 4px 0 5px !important;
+	padding: 2px 0 2px 3px;
+	width: 114px;
+}
+.InfoError {
+	clear: both;
+	color: #FF0000;
+	font-size: 14px;
+	padding-top: 17px;
+}
+.BlockNewUser {
+	right: 97px;
+	position: absolute;
+	top: 450px;
+	width: 360px;
+	font-size: 14px;
+	color: #e05f00;
+}
+.BlockNewUser .Question {
+	color: #df6000;
+	font-weight: bold;
+	float: left;
+	padding: 12px 20px 5px 5px;
+}
+
+a.QuenMatKhau:visited,
+a.QuenMatKhau:link {
+	float: left;
+	display: block;
+	width: 150px;
+	height: 20px;
+	color: #60492a;
+	position: absolute;
+	left: 82px;
+	top: 385px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a.QuenMatKhau:hover {
+	color: #d62c0b;
+	
+}
+
+a.DangKyNhanh:visited,
+a.DangKyNhanh:link {
+	float: left;
+	display: block;
+	width: 150px;
+	height: 40px;
+	background: url(../images/bg-btn-dangkynhanh.png) no-repeat 0 0 transparent;
+	text-indent: -9999em;
+}
+
+a.DangKyNhanh:hover {
+	background-position: 0 -40px;
+}
+
+a.TrangChuCu:visited,
+a.TrangChuCu:link {
+	float: left;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url(../images/trangchucu.jpg) no-repeat 0 0 transparent;
+	text-indent: -9999em;
+	position: fixed;
+	top: 10px;
+	right: 0;
+	display: none;
+}
+
+a.TrangChuCu:hover {
+	background-position: 0 -100px;
+}
+
+a.ThuNho:visited,
+a.ThuNho:link {
+	float: left;
+	display: block;
+	width: 120px;
+	height: 28px;
+	background: url(../images/thu-nho.png) no-repeat 0 0 transparent;
+	text-indent: -9999em;
+	position:  absolute;
+	left: 202px;
+	top: 507px;
+}
+
+a.ThuNho:hover {
+	background-position: 0 -30px;
+}
+a.BtnDangNhap:visited,
+a.BtnDangNhap:link {
+	float: left;
+	display: none;
+	width: 444px;
+	height: 162px;
+	background: url(../images/btn-dang-nhap.png) no-repeat 0 0 transparent;
+	text-indent: -9999em;
+	position:  absolute;
+	left: 99px;
+	top: 0px;
+}
+
+a.BtnDangNhap:hover {
+	background-position: -444px 0px;
+}
+
+
+.LuuY {
+	left: 40px;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 210px;
+	padding: 0px 0 0 ;
+	width: 440px;
+}
+form div.LuuY p.TextWarning {
+	text-align: center;
+	color: #265000;
+	font-size: 11px;
+	float: left;
+	width: 236px;
+	
+}
+form div.LuuY p.TextWarning span {
+	line-height: 40px;
+}
+form div.LuuY p.TextWarning a:hover {
+	color: #BA0000;
+	text-decoration:none;
+}
+input.ChoiNgay {
+	background: url(../images/bt-ok.png) no-repeat;
+	text-indent: -9999px;
+	display: block;
+	width: 85px;
+	height: 85px;
+	margin: 0;
+	border: none;
+	padding:0;
+	cursor: pointer;
+}
+input.ChoiNgay:hover {
+	background-position: 0 -85px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input, a {
+	outline: none;
+}
+ul.Register {
+	width: 100%;
+	overflow: hidden;
+}
+ul.Register li {
+	width: 100%;
+	float: left;
+	padding: 0 0 5px;
+}
+ul.Register li label {
+	font-weight: bold;
+	width: 120px;
+	float: left;
+	text-align: right;
+	padding: 3px 5px 0 0;
+	font-size: 11px;
+}
+ul.Register li .TextBox {
+	width: 138px;
+	height: 20px;
+	float: left;
+	padding: 2px 5px;
+	
+	border: 1px solid #abb8a6;
+	
+}
+ul.Register li .Capchar {
+	width: 150px;
+	float: left;
+}
+.TextBox input {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	color: #000;
+}
+ul.Register li .Check {
+	width: 70px;
+	float: left;
+	padding: 3px 0 0 5px;
+}
+ul.Register li .Check a:link,
+ul.Register li .Check a:visited {
+	color: #fbf8e2;
+	text-decoration: underline;
+}
+ul.Register li .Check a:hover {
+	color: #65fdf4;
+	text-decoration: underline;
+}
+
+
+.Agree {
+	margin-left: 125px;
+}
+.InputAgree {
+	float: left;
+	margin-top: 3px;
+}
+.BtReg {
+	width: 125px;
+	height: 69px;
+	background:url(../images/bt-dangky.png) 0 0 no-repeat;
+	position: absolute;
+	left: 360px;
+	bottom: 135px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+.BtReg:hover {
+	background-position: 0 -69px;
+}
+
+	.TabPageLogin {
+		width: 389px;
+		padding: 9px 0 0 90px;
+	}
+	.TabContent {
+		clear: both;
+	}
+		/*.TabPageLogin  a {
+			float: left;
+			display: block;
+			text-indent: -9999px;
+			background: url(../images/bg-tab.jpg) no-repeat ;
+		}*/
+	
+		a.QuickRegTitle:link,
+        a.QuickRegTitle:visited{
+			background-position: 0 -59px;
+			width: 200px;
+			height: 59px;
+			
+			
+		}
+		a.QuickRegTitle:hover,
+		ul.TabPageLogin li.Active a.QuickRegTitle {
+			background-position: 0 0;
+		}
+		a.LoginTitle:link,
+		a.LoginTitle:visited
+		 {
+			 width: 189px;
+			 height: 59px;
+			 background-position: -200px 0px ;
+		}
+		a.LoginTitle:hover,
+		ul.TabPageLogin li.Active a.LoginTitle {
+			background-position: -200px -59px;
+		}
+		
+	a.ChangeTab:link,
+	 a.ChangeTab:visited{
+		 color: #0181e4;
+		
+	}
+	a.ChangeTab:hover {
+		text-decoration: underline;
+	}
+/* Popup Listserver */
+
+.BtClose {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	color: #FFF;
+	font-weight: bold;
+	padding: 3px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #000;
+	display: block;
+	text-indent: 0 !important;
+	z-index: 1001;
+}
+.PopupNewServer {
+	display: none;
+	width: 680px;
+	height: 460px;
+	position: absolute;
+	left: 90px;
+	top: 255px;
+	z-index: 1000;
+	border: 1px solid #000;
+}
+.PopupNewServer a.SuKienMoi {
+	display: block;
+	width: 680px;
+	height: 460px;
+	z-index: 1000;
+}
+.PopupNewServer a.SuKienMoi img {
+	width: 680px;
+	height: 460px;
+	display: block;
+}
+.PopupNewServer a.BtGiaoDienCu {
+	width: 320px;
+	height: 47px;
+	background: url(../images/bt-giaodiencu.png) no-repeat;
+	left: 152px;
+	top: 410px;
+	z-index: 1001;
+}
+.PopupNewServer a.BtGiaoDienCu:hover {
+	background-position: 0px -47px;
+}
